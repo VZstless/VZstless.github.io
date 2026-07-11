@@ -1,5 +1,7 @@
+title = "VZstless"
+
 # The URL the site will be built for
-base_url = "https://blog.dark-flames.com"
+base_url = "https://vzstless.moe"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
