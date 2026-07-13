@@ -18,7 +18,7 @@ favicon = "favicon.ico"
 menu = [
   { name = "/posts", url = "/posts", weight = 1 },
   { name = "/tags", url = "/tags", weight = 2 },
-  { name = "/about", url = "/about", weight = 3 },
+  { name = "/friends", url = "/friends", weight = 3 },
 ]
 mathjax = true
 mathjax_dollar_inline_enable = true

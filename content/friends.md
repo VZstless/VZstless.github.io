@@ -1,0 +1,4 @@
++++
+title = "Friends"
+path = "friends"
++++
