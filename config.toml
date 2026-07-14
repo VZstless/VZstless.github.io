@@ -14,6 +14,7 @@ theme = "apollo"
 taxonomies = [{ name = "tags", feed = true }]
 
 [extra]
+comment = true
 favicon = "favicon.ico"
 menu = [
   { name = "/posts", url = "/posts", weight = 1 },

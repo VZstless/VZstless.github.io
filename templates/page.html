@@ -10,3 +10,10 @@
     {% endif %}
     
 {% endblock main_content %}
+
+{% block comments %}
+    {% if config.extra.comment | default(value=false) %}
+    <div class="giscus"></div>
+    {% include "_giscus_script.html" %}
+    {% endif %}
+{% endblock %}
