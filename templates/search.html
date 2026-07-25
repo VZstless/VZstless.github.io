@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+{% if section.extra.section_path -%}
+    {% set section = get_section(path=section.extra.section_path) %}
+{% endif -%}
+
+{{ post_macros::page_header(title=section.title) }}
+
+<div class="search-container" data-search-index="{{ get_url(path='search_index.en.json', trailing_slash=false) }}">
+    <input type="text" id="search-input" class="search-input" placeholder="Loading search index..." disabled autofocus>
+    <div id="search-results"></div>
+</div>
+
+<script src="{{ get_url(path='search-assets/elasticlunr.min.js', trailing_slash=false) }}"></script>
+<script src="{{ get_url(path='search-assets/search.js', trailing_slash=false) }}"></script>
+{% endblock main_content %}

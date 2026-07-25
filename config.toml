@@ -20,6 +20,7 @@ menu = [
   { name = "/posts", url = "/posts", weight = 1 },
   { name = "/tags", url = "/tags", weight = 2 },
   { name = "/friends", url = "/friends", weight = 3 },
+  { name = "/search", url = "/search", weight = 4 },
 ]
 mathjax = true
 mathjax_dollar_inline_enable = true
@@ -32,3 +33,10 @@ socials = [
 insert_anchor_links = "heading"
 
 dynamic_note = true
+
+[search]
+include_title = true
+include_description = true
+include_path = true
+include_content = true
+index_format = "elasticlunr_json"
