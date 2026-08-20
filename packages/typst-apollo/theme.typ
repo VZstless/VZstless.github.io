@@ -13,14 +13,28 @@
 
 
 #let main-font = (
-  "Charter",
-  "Source Han Serif SC",
-  "Source Han Serif TC",
-  "Linux Libertine",
+  "JetBrains Mono",
+  "Source Han Sans SC",
+  "Source Han Sans TC",
+  "Noto Sans CJK SC",
+  "Noto Sans CJK TC",
+  "Noto Sans CJK JP",
+  "Noto Sans CJK HK",
+  "DejaVu Sans Mono",
+)
+
+#let header-font = (
+  "Space Grotesk",
+  "Source Han Sans SC",
+  "Source Han Sans TC",
+  "Noto Sans CJK SC",
+  "Noto Sans CJK TC",
+  "Noto Sans CJK JP",
+  "Noto Sans CJK HK",
 )
 
 #let code-font = (
-  "BlexMono Nerd Font Mono",
+  "JetBrains Mono",
   "DejaVu Sans Mono",
 )
 

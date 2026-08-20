@@ -20,8 +20,9 @@ use_cdn = true
 menu = [
   { name = "/posts", url = "/posts", weight = 1 },
   { name = "/tags", url = "/tags", weight = 2 },
-  { name = "/friends", url = "/friends", weight = 3 },
-  { name = "/search", url = "/search", weight = 4 },
+  { name = "/dn42", url = "/dn42", weight = 3 },
+  { name = "/friends", url = "/friends", weight = 4 },
+  { name = "/search", url = "/search", weight = 5 },
 ]
 mathjax = true
 mathjax_dollar_inline_enable = true

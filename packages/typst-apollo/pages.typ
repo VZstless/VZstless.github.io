@@ -85,7 +85,7 @@
   let get-ld(loc, k) = make-unique-label(k, disambiguator: ld.at(loc).at(k))
 
   // render a dash to hint headings instead of bolding it.
-  show heading: set text(weight: "regular") if is-web-target
+  show heading: set text(weight: "regular", font: header-font) if is-web-target
   show heading: it => {
     block({
       if is-web-target {
