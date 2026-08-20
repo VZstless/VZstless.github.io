@@ -1,4 +1,4 @@
-{% macro list_tag_posts(pages, tag_name=false) %}
+{% component list_tag_posts(pages, tag_name) %}
     {% if tag_name %}
     <div class="page-header">
         Entries tagged :: {{ tag_name }}<span class="primary-color" style="font-size: 1.6em">.</span>
@@ -10,11 +10,11 @@
     {% endif %}
 
     <main class="list">
-    {{ post_macros::list_posts(pages=pages) }}
+    {{<list_posts pages={pages}/>}}
     </main>
-{% endmacro %}
+{% endcomponent list_tag_posts %}
 
-{% macro list_posts(pages) %}
+{% component list_posts(pages) %}
 <ul>
     {%- for page in pages %}
     <li class="list-item">
@@ -52,9 +52,9 @@
   </li>
     {% endfor -%}
 </ul>
-{% endmacro list_posts %}
+{% endcomponent list_posts %}
 
-{% macro list_terms(terms) %}
+{% component list_terms(terms) %}
     <ul>
     {%- for term in terms %}
         <section class="list-item">
@@ -65,9 +65,9 @@
 
     {% endfor -%}
     </ul>
-{% endmacro list_terms %}
+{% endcomponent list_terms %}
 
-{% macro tags(page, short=false) %}
+{% component tags(page, short = false) %}
     {%- if page.taxonomies and page.taxonomies.tags %}
         <span class="post-tags-inline">
             {%- if short %}
@@ -78,36 +78,36 @@
                 {%- set sep = "&nbsp;" -%}
             {% endif -%}
             {%- for tag in page.taxonomies.tags %}
-                <a class="post-tag" href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}">#{{ tag }}</a>
+                <a class="post-tag" href="{{ get_taxonomy_url(kind='tags', term=tag) | safe }}">#{{ tag }}</a>
                 {%- if not loop.last %}{{ sep | safe }}{% endif -%}
             {% endfor -%}
         </span>
     {% endif -%}
-{% endmacro tags %}
+{% endcomponent tags %}
 
-{% macro page_header(title) %}
+{% component page_header(title) %}
     <div class="page-header">
         {{ title }}<span class="primary-color" style="font-size: 1.6em">.</span>
     </div>
-{% endmacro content %}
+{% endcomponent page_header %}
 
-{% macro home_page(section) %}
+{% component home_page(section) %}
 <main>
     <article>
         <section class="body">
-            {{post_macros::page_header(title=section.title)}}
+            {{<page_header title={section.title}/>}}
             {{ section.content | safe }}
         </section>
     </article>
 </main>
-{% endmacro home_page %}
+{% endcomponent home_page %}
 
-{% macro content(page) %}
+{% component content(page, config) %}
 <main>
     <article>
         <div class="title">
             {#<h1 class="title">{{ page.title }}</h1>#}
-            {{ post_macros::page_header(title=page.title) }}
+            {{<page_header title={page.title}/>}}
 
                 <div class="meta">
                     {% if page.date %}
@@ -127,7 +127,7 @@
                             <span class="tags-label"> :: Tags:</span>
                             <span class="tags">
                                 {%- for tag in page.taxonomies.tags %}
-                                    <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="post-tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+                                    <a href="{{ get_taxonomy_url(kind='tags', term=tag) }}" class="post-tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
                                 {% endfor %}
                             </span>
                     {% endif %}
@@ -137,7 +137,7 @@
                         {# Use the page's repo_url if defined, otherwise use the global edit_repo_url #}
                         {% if page.extra.repo_url is defined %}
                             {% set repo_url = page.extra.repo_url %}
-                        {% elif config.extra.repo_url is defined %}
+                        {% elif config.extra?.repo_url is defined %}
                             {% set repo_url = config.extra.repo_url %}
                         {% else %}
                             {% set repo_url = false %}
@@ -164,7 +164,7 @@
         {% endif %}
 
         {# Optional table of contents #}
-        {% if config.extra.toc | default(value=false) %}
+        {% if config.extra?.toc | default(value=false) %}
         {% if page.toc %}
             <div class="toc-container">
                 <h1 class="toc-title">Table of Contents</h1>
@@ -203,9 +203,9 @@
         </section>
     </article>
 </main>
-{% endmacro content %}
+{% endcomponent content %}
 
-{% macro cards_posts(pages) %}
+{% component cards_posts(pages) %}
     <div class="cards">
     {%- for page in pages %}
         <div class="card">
@@ -245,4 +245,4 @@
 
     {% endfor -%}
     </div>
-{% endmacro cards_posts %}
+{% endcomponent cards_posts %}

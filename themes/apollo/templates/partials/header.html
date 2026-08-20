@@ -1,11 +1,9 @@
-{% import "macros/macros.html" as post_macros %}
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% if page.extra.meta %}
+    {% if page?.extra?.meta %}
          <!-- the meta data config goes here  -->
          {% for data in page.extra.meta %}
              <meta
@@ -37,19 +35,19 @@
 
     {% else %}
     <title>
-        {% if page.title %} {{ page.title }}
-        {% elif section.title %} {{ section.title }}
+        {% if page?.title %} {{ page.title }}
+        {% elif section?.title %} {{ section.title }}
         {% elif config.title %} {{ config.title }}
         {% else %} Post {% endif %}
     </title>
 
         {% if not page_has_og_title %}
-            <meta property="og:title" content="{% if page.title -%}{{ page.title }}{% elif config.title -%}{{ config.title }}{% else -%}Post{% endif -%}" />
+            <meta property="og:title" content="{% if page?.title -%}{{ page.title }}{% elif config.title -%}{{ config.title }}{% else -%}Post{% endif -%}" />
         {% endif %}
      {% endif %}
 
      {% if not page_has_og_description %}
-         {% if page.description %}
+         {% if page?.description %}
              <meta property="og:description" content="{{ page.description }}" />
          {% elif config.description %}
              <meta property="og:description" content="{{ config.description }}" />
@@ -57,7 +55,7 @@
      {% endif %}
 
      {% if not page_has_description %}
-         {% if page.description %}
+         {% if page?.description %}
              <meta name="description" content="{{ page.description }}" />
          {% elif config.description %}
              <meta name="description" content="{{ config.description }}" />
@@ -78,10 +76,10 @@
     {% endif %}
 
     {# Analytics #}
-    {% if config.extra.analytics.enabled %}
-        {% if config.extra.analytics.umami.website_id %}
+    {% if config.extra.analytics?.enabled %}
+        {% if config.extra.analytics.umami?.website_id %}
             {% set website_id = config.extra.analytics.umami.website_id %}
-            {% set host_url = config.extra.analytics.umami.host_url | default(value="https://analytics.eu.umami.is") %}
+            {% set host_url = config.extra.analytics.umami?.host_url | default(value="https://analytics.eu.umami.is") %}
 
             <script>
                 (function () {
@@ -95,25 +93,25 @@
             <script async src="/js/imamu.js" data-website-id="{{ website_id }}" data-host-url="{{ host_url }}"></script>
         {% endif %}
 
-        {% if config.extra.analytics.goatcounter.user %}
+        {% if config.extra.analytics.goatcounter?.user %}
             {% set user = config.extra.analytics.goatcounter.user %}
-            {% set host = config.extra.analytics.goatcounter.host | default(value="goatcounter.com") %}
+            {% set host = config.extra.analytics.goatcounter?.host | default(value="goatcounter.com") %}
 
             <script data-goatcounter="https://{{ user }}.{{ host }}/count" async src="{{ get_url(path="js/count.js") }}"></script>
             <noscript>
                 {# EasyList blocks '.com/count?', so we have to use '.com//count' #}
-                <img src="https://{{ user }}.{{ host }}//count?p={{ current_path }}&t={{ page.title | default(value=config.title) }}">
+                <img src="https://{{ user }}.{{ host }}//count?p={{ current_path }}&t={{ page?.title | default(value=config.title) }}">
             </noscript>
         {% endif %}
     {% endif %}
 
     {# Fancy Codeblock #}
-    {% if config.extra.fancy_code %}
+    {% if config.extra?.fancy_code %}
         <script src={{ get_url(path="js/codeblock.js") }}></script>
     {% endif %}
 
     {# Table of contents #}
-    {% if config.extra.toc | default(value=false) %}
+    {% if config.extra?.toc | default(value=false) %}
         <script src={{ get_url(path="js/toc.js") }}></script>
     {% endif %}
     
@@ -141,7 +139,7 @@
     <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
 
 
-    {% set theme = config.extra.theme | default(value="toggle") %}
+    {% set theme = config.extra?.theme | default(value="toggle") %}
     {% if theme == "dark" %}
         <link rel="stylesheet" type="text/css" href="{{ get_url(path='theme/dark.css') }}" />
     {% elif theme == "light" %}
@@ -174,7 +172,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href={{ get_url(path="main.css") }} />
 
-    {% if config.extra.stylesheets %}
+    {% if config.extra?.stylesheets %}
         {% for stylesheet in config.extra.stylesheets %}
             <link rel="stylesheet" href="{{ get_url(path=stylesheet) }}">
         {% endfor %}

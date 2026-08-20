@@ -1,10 +1,10 @@
-{% macro typst(page) %}
+{% component typst(page, config) %}
 <main>
     <article>
         {% if not page.extra.hide_title %}
             <div class="title">
                 {#<h1 class="title">{{ page.title }}</h1>#}
-                {{ post_macros::page_header(title=page.title) }}
+                {{<page_header title={page.title}/>}}
 
                     <div class="meta">
                         {% if page.date %}
@@ -24,7 +24,7 @@
                                 <span class="tags-label"> :: Tags:</span>
                                 <span class="tags">
                                     {%- for tag in page.taxonomies.tags %}
-                                        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="post-tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+                                        <a href="{{ get_taxonomy_url(kind='tags', term=tag) }}" class="post-tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
                                     {% endfor %}
                                 </span>
                         {% endif %}
@@ -34,7 +34,7 @@
                             {# Use the page's repo_url if defined, otherwise use the global edit_repo_url #}
                             {% if page.extra.repo_url is defined %}
                                 {% set repo_url = page.extra.repo_url %}
-                            {% elif config.extra.repo_url is defined %}
+                            {% elif config.extra?.repo_url is defined %}
                                 {% set repo_url = config.extra.repo_url %}
                             {% else %}
                                 {% set repo_url = false %}
@@ -73,4 +73,4 @@
         <script src={{ get_url(path="svg_utils.js") }}></script>
     </article>
 </main>
-{% endmacro typst %}
+{% endcomponent typst %}
