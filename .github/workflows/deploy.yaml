@@ -14,10 +14,31 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: deploy
-        uses: dark-flames/apollo-typst@action-v1
+      - name: Install typst-ts-cli
+        uses: taiki-e/cache-cargo-install-action@v3
         with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-branch: static
+          tool: typst-ts-cli
+          git: https://github.com/Myriad-Dreamin/typst.ts
+          tag: v0.6.0
+          locked: true
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: 'yarn'
+
+      - name: Build frontend
+        shell: bash
+        run: |
+          yarn install
+          yarn build:fe
+          yarn build:typ
+
+      - name: Deploy with Zola
+        uses: shalzz/zola-deploy-action@v0.23.3
+        env:
+          PAGES_BRANCH: static
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
