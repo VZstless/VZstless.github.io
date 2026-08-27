@@ -9,6 +9,7 @@ template = "homepage.html"
 
 Telegram: [VZstless](https://t.me/VZstless)  
 Matrix: @vzstless:matrix.org  
+Signal: VZstless.404  
 X (twitter): [VZstless](https://x.com/VZstless)  
 Discord: [VZstless](https://discord.com/users/1327824008787398708)  
 Mastodon: [aineias.cc](https://aineias.cc/@vzstless), [bcom.moe](https://bcom.moe/@VZstless)  
