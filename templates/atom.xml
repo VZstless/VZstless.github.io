@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ lang }}">
+    <title>{{ config.title }}
+    {%- if term %} - {{ term.name }}
+    {%- elif section and section.title %} - {{ section.title }}
+    {%- endif -%}
+    </title>
+    <link rel="self" type="application/atom+xml" href="{{ feed_url | safe }}"/>
+    <link rel="alternate" type="text/html" href="https://vzstless.moe/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    {% if last_updated is defined %}<updated>{{ last_updated | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>{% endif %}
+    <id>{{ feed_url | safe }}</id>
+    {%- for page in pages %}
+    <entry xml:lang="{{ page.lang }}">
+        <title>{{ page.title }}</title>
+        {% if page.date %}<published>{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</published>{% endif %}
+        {% if page.updated %}<updated>{{ page.updated | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>{% elif page.date %}<updated>{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>{% endif %}
+        <link rel="alternate" type="text/html" href="https://vzstless.moe{{ page.path | safe }}"/>
+        <id>https://vzstless.moe{{ page.path | safe }}</id>
+    </entry>
+    {%- endfor %}
+</feed>

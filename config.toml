@@ -30,6 +30,7 @@ mathjax_dollar_inline_enable = true
 socials = [
   { name = "twitter", url = "https://vzstless.moe", icon = "twitter" },
   { name = "github", url = "https://github.com/VZstless", icon = "github" },
+  { name = "rss", url = "/posts/atom.xml", icon = "rss" },
 ]
 
 insert_anchor_links = "heading"
