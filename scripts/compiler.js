@@ -49,6 +49,13 @@ class Compiler {
       throw e;
     }
   }
+
+  pdf(mainFilePath) {
+    return this.base.pdf({
+      mainFilePath,
+      inputs: { 'x-target': 'pdf' },
+    });
+  }
 }
 
 module.exports = { Compiler };

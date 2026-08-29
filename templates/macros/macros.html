@@ -153,6 +153,13 @@
                         <span class="draft-label">DRAFT</span>
                     {% endif %}
 
+                    {# Export to PDF, only for posts #}
+                    {% if page.components | first == "posts" %}
+                        <button class="pdf-export-btn" onclick="window.print();" title="Export to PDF" aria-label="Export to PDF">
+                            {% include "partials/printer_icon.html" %}
+                        </button>
+                    {% endif %}
+
                 </div>
         </div>
 

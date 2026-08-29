@@ -117,3 +117,121 @@ html {
 .search-result-title::before {
   content: none;
 }
+
+/* PDF export button (printer icon) in the post meta line */
+.pdf-export-btn {
+  float: right;
+  margin-left: 1em;
+  padding: 2px 4px;
+  border: none;
+  border-bottom: unset;
+  background: none;
+  background-image: unset;
+  color: var(--text-1);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.pdf-export-btn:hover {
+  color: var(--primary-color);
+  background: none;
+  background-color: transparent;
+}
+
+.pdf-export-btn svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
+
+@media print {
+  /* Mirror the site's light theme instead of flattening everything */
+  :root,
+  :root.light,
+  :root.dark {
+    --text-0: #212121 !important;
+    --text-1: #5f5f5f !important;
+    --bg-0: #ffffff !important;
+    --bg-1: #fafafa !important;
+    --bg-2: #ececec !important;
+    --border-color: #ececec !important;
+    --primary-color: #ef5350 !important;
+    --hover-color: #ffffff !important;
+  }
+
+  html {
+    font-size: 10pt;
+    line-height: 1.5;
+    background: #fff;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .content {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Only hide interactive chrome, keep the article's look */
+  header,
+  .giscus,
+  .pdf-export-btn,
+  .toc-container,
+  .pagination,
+  .note-toggle,
+  .search-container,
+  .search-input,
+  .search-results-list {
+    display: none !important;
+  }
+
+  .page-header {
+    font-size: 1.6em;
+    margin: 0 0 0.6rem 0;
+  }
+
+  .meta {
+    color: #666;
+  }
+
+  pre,
+  code,
+  blockquote,
+  .note-container,
+  .note-header,
+  .note-content,
+  table th,
+  table td {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  pre,
+  code {
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  pre,
+  blockquote,
+  .note-container,
+  table,
+  img,
+  figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

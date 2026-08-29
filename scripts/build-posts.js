@@ -58,6 +58,10 @@ function compileEntry(compiler, typstRoot, entry, artifactRoot, outputPath, dept
 
     fs.writeFileSync(join(artifactPath, theme, 'main.multi.sir.in'), vec);
   }
+
+  printWithDepth(depth + 1, 'PDF:');
+  const pdf = compiler.pdf(entryPath);
+  fs.writeFileSync(join(artifactPath, 'main.pdf'), pdf);
 }
 
 function compileWorkspace(compiler, typstRoot, path, artifactRoot, depth) {

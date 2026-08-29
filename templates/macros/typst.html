@@ -50,6 +50,13 @@
                             <span class="draft-label">DRAFT</span>
                         {% endif %}
 
+                        {# Export to PDF, only for posts. The PDF is generated at build time by typst #}
+                        {% if page.components | first == "posts" %}
+                            <a class="pdf-export-btn" href="{{ get_url(path='typst/' ~ page.extra.typst ~ '/main.pdf') }}" download="{{ page.slug }}.pdf" title="Export to PDF" aria-label="Export to PDF">
+                                {% include "partials/printer_icon.html" %}
+                            </a>
+                        {% endif %}
+
                     </div>
             </div>
             <br />
