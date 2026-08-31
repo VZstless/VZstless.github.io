@@ -7,7 +7,6 @@
 )
 
 #set par(justify: true)
-#set heading(numbering: "1.")
 
 = Welcome to AS4242420258
 
