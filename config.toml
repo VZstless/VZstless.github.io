@@ -18,11 +18,12 @@ comment = true
 favicon = "favicon.ico"
 use_cdn = true
 menu = [
-  { name = "/posts", url = "/posts", weight = 1 },
-  { name = "/tags", url = "/tags", weight = 2 },
-  { name = "/dn42", url = "/dn42", weight = 3 },
-  { name = "/friends", url = "/friends", weight = 4 },
-  { name = "/search", url = "/search", weight = 5 },
+  { name = "/whoami", url = "/whoami", weight = 1 },
+  { name = "/posts", url = "/posts", weight = 2 },
+  { name = "/tags", url = "/tags", weight = 3 },
+  { name = "/dn42", url = "/dn42", weight = 4 },
+  { name = "/friends", url = "/friends", weight = 5 },
+  { name = "/search", url = "/search", weight = 6 },
 ]
 mathjax = true
 mathjax_dollar_inline_enable = true
