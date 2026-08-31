@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    {% if section.extra.typst | default(value=false) %}
+        {{<typst page={section} config={config}/>}}
+    {% else %}
+        {{<home_page section={section}/>}}
+    {% endif %}
+{% endblock main_content %}
