@@ -13,7 +13,7 @@
 
 
 #let main-font = (
-  "JetBrains Mono",
+  "Noto Sans",
   "Source Han Sans SC",
   "Source Han Sans TC",
   "Noto Sans CJK SC",
