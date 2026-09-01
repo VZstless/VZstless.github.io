@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>VZstless - life</title>
+    <link rel="self" type="application/atom+xml" href="https://vzstless.moe/tags/life/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://vzstless.moe/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-08-31T00:00:00+00:00</updated>
+    <id>https://vzstless.moe/tags/life/atom.xml</id>
+    <entry xml:lang="en">
+        <title>从伪人证明到服从性测试</title>
+        <published>2026-08-31T00:00:00+00:00</published>
+        <updated>2026-08-31T00:00:00+00:00</updated>
+        <link rel="alternate" type="text/html" href="https://vzstless.moe/posts/dehumanize/"/>
+        <id>https://vzstless.moe/posts/dehumanize/</id>
+    </entry>
+    <entry xml:lang="en">
+        <title>如何脱离视频流</title>
+        <published>2026-08-31T00:00:00+00:00</published>
+        <updated>2026-08-31T00:00:00+00:00</updated>
+        <link rel="alternate" type="text/html" href="https://vzstless.moe/posts/escapefromvideo/"/>
+        <id>https://vzstless.moe/posts/escapefromvideo/</id>
+    </entry>
+</feed>

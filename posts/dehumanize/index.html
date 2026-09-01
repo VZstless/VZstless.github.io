@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<html class="dark light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         从伪人证明到服从性测试
+        
+    </title>
+
+        
+            <meta property="og:title" content="从伪人证明到服从性测试" />
+        
+     
+
+     
+         
+     
+
+     
+         
+    
+
+    
+    
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@4.5.8/index.min.css">
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+        <script src=https://vzstless.moe/js/note.js></script>
+    
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    
+        <script type="module" src=https://vzstless.moe/apollo-typst/apollo.typst.mjs></script>
+        <link rel="stylesheet" href=https://vzstless.moe/apollo-typst/apollo.typst.css>
+        <script>
+            /// https://segmentfault.com/a/1190000016574288
+            (function () {
+                var ie = !!(window.attachEvent && !window.opera);
+                var wk = /webkit\/(\d+)/i.test(navigator.userAgent) && RegExp.$1 < 400;
+                var fn = [];
+                var run = function () {
+                    for (var i = 0; i < fn.length; i++) fn[i]();
+                };
+                var d = document;
+                d.ready = function (f) {
+                    if (!ie && !wk && d.addEventListener) return d.addEventListener('DOMContentLoaded', f, false);
+                    if (fn.push(f) > 1) return;
+                    if (ie)
+                        (function () {
+                            try {
+                                d.documentElement.doScroll('left');
+                                run();
+                            } catch (err) {
+                                setTimeout(arguments.callee, 0);
+                            }
+                        })();
+                    else if (wk)
+                        var t = setInterval(function () {
+                            if (/^(loaded|complete)$/.test(d.readyState)) clearInterval(t), run();
+                        }, 0);
+                };
+            })();
+
+            window.captureStack = function() { }
+            window.getTypstTheme = function() { return getSavedTheme(); };
+        </script>
+        <script>
+            window.updateScale = function () {
+                const appElem = document.getElementById('typst-app');
+                const appWidth = appElem.offsetWidth;
+
+                appElem.style.setProperty('--typst-dom-scale', window.calcScale(appWidth));
+            }
+
+            window.typstBindSvgDom = function () {
+                window.updateScale();
+                return undefined;
+            };
+            window.captureStack = function () {
+                return undefined;
+            };
+               
+            document.addEventListener("DOMContentLoaded", () => {
+                // todo: less copy, we can reuse the code among the hexo/shiroa/apollo?
+                const appElem = document.getElementById('typst-app');
+                window.updateScale();
+
+                let plugin = window.TypstRenderModule.createTypstRenderer();
+                plugin
+                .init({
+                    getModule: () =>
+                        'https://vzstless.moe/wasm/typst_ts_renderer_bg.wasm',
+                })
+                .then(() => {
+                    window.typstBookRenderPage(plugin, 'https://vzstless.moe/typst/posts/dehumanize', appElem);
+                });
+            });
+          </script>
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="VZstless" href="https://vzstless.moe/posts/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=https://vzstless.moe/theme/light.css />
+        <link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://vzstless.moe/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+    <script src=https://vzstless.moe/js/themetoggle.js></script>
+    
+        <script>setTheme(getSavedTheme());</script>
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://vzstless.moe/main.css />
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https://vzstless.moe>VZstless</a>
+
+        <div class="socials">
+            
+            <a rel="me" href="https://vzstless.moe" class="social">
+                <img alt=twitter src=https://vzstless.moe/social_icons/twitter.svg>
+            </a>
+            
+            <a rel="me" href="https://github.com/VZstless" class="social">
+                <img alt=github src=https://vzstless.moe/social_icons/github.svg>
+            </a>
+            
+            <a rel="me" href="/posts/atom.xml" class="social">
+                <img alt=rss src=https://vzstless.moe/social_icons/rss.svg>
+            </a>
+            
+        </div>
+    </div>
+
+    <nav>
+        
+        <a href=https://vzstless.moe/whoami style="margin-left: 0.5em">/whoami</a>
+        
+        <a href=https://vzstless.moe/posts style="margin-left: 0.5em">/posts</a>
+        
+        <a href=https://vzstless.moe/tags style="margin-left: 0.5em">/tags</a>
+        
+        <a href=https://vzstless.moe/dn42 style="margin-left: 0.5em">/dn42</a>
+        
+        <a href=https://vzstless.moe/friends style="margin-left: 0.5em">/friends</a>
+        
+        <a href=https://vzstless.moe/search style="margin-left: 0.5em">/search</a>
+        
+
+        
+        |<a id="dark-mode-toggle" onclick="toggleTheme(); typstChangeTheme(); event.preventDefault();" href="#">
+            <img src=https://vzstless.moe/feather/sun.svg id="sun-icon" style="filter: invert(1);" alt="Light" />
+            <img src=https://vzstless.moe/feather/moon.svg id="moon-icon" alt="Dark" />
+        </a>
+
+        <!-- Inititialize the theme toggle icons -->
+        <script>updateItemToggleTheme()</script>
+        
+    </nav>
+</header>
+
+
+        
+    
+        
+<main>
+    <article>
+        
+            <div class="title">
+                
+                
+    <div class="page-header">
+        从伪人证明到服从性测试<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2026-08-31</time>
+                        
+
+                        
+
+                        
+
+                        
+                        
+                                <span class="tags-label"> :: Tags:</span>
+                                <span class="tags">
+                                        <a href="https://vzstless.moe/tags/life/" class="post-tag">life</a>
+                                    
+                                </span>
+                        
+
+                        
+                        
+
+                        
+
+                        
+                        
+                            <a class="pdf-export-btn" href="https://vzstless.moe/typst/posts/dehumanize/main.pdf" download="dehumanize.pdf" title="Export to PDF" aria-label="Export to PDF">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <path fill-rule="evenodd" d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 0 0 3 3h.27l-.155 1.705A1.875 1.875 0 0 0 7.232 22.5h9.536a1.875 1.875 0 0 0 1.867-2.045l-.155-1.705h.27a3 3 0 0 0 3-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0 0 18 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM16.5 6.205v-2.83A.375.375 0 0 0 16.125 3h-8.25a.375.375 0 0 0-.375.375v2.83a49.353 49.353 0 0 1 9 0Zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 0 1-.374.409H7.232a.375.375 0 0 1-.374-.409l.526-5.784a.373.373 0 0 1 .333-.337 41.741 41.741 0 0 1 8.566 0Zm.967-3.97a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H18a.75.75 0 0 1-.75-.75V10.5ZM15 9.75a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V10.5a.75.75 0 0 0-.75-.75H15Z" clip-rule="evenodd" />
+</svg>
+
+                            </a>
+                        
+
+                    </div>
+            </div>
+            <br />
+        
+
+        
+
+        <section class="body">
+            
+                <div id="typst-app" class="typst-app with-title"></div>
+            
+        </section>
+
+        <script src=https://vzstless.moe/svg_utils.js></script>
+    </article>
+</main>
+
+    
+    
+
+
+        
+    
+    <div class="giscus"></div>
+    <script src="https://giscus.app/client.js"
+        data-repo="VZstless/VZstless.github.io"
+        data-repo-id="R_kgDOTQimlA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOTQimlM4DBHKF"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+    
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>VZstless - gaming</title>
+    <link rel="self" type="application/atom+xml" href="https://vzstless.moe/tags/gaming/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://vzstless.moe/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-08-30T00:00:00+00:00</updated>
+    <id>https://vzstless.moe/tags/gaming/atom.xml</id>
+    <entry xml:lang="en">
+        <title>《命令与征服》剧情后日谈</title>
+        <published>2026-08-30T00:00:00+00:00</published>
+        <updated>2026-08-30T00:00:00+00:00</updated>
+        <link rel="alternate" type="text/html" href="https://vzstless.moe/posts/cnc-aftermath/"/>
+        <id>https://vzstless.moe/posts/cnc-aftermath/</id>
+    </entry>
+</feed>
