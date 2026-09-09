@@ -71,6 +71,10 @@
     {% if config.extra.use_cdn | default(value=false) %}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@4.5.8/index.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif@5.3.0/400.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif@5.3.0/700.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5.3.0/400.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5.3.0/700.css">
     {% else %}
         <link href={{ get_url(path="fonts.css") }} rel="stylesheet" />
     {% endif %}

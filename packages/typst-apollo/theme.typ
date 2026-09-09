@@ -13,24 +13,24 @@
 
 
 #let main-font = (
-  "Noto Sans",
-  "Source Han Sans SC",
-  "Source Han Sans TC",
-  "Noto Sans CJK SC",
-  "Noto Sans CJK TC",
-  "Noto Sans CJK JP",
-  "Noto Sans CJK HK",
+  "Noto Serif",
+  "Source Han Serif SC",
+  "Source Han Serif TC",
+  "Noto Serif CJK SC",
+  "Noto Serif CJK TC",
+  "Noto Serif CJK JP",
+  "Noto Serif CJK HK",
   "DejaVu Sans Mono",
 )
 
 #let header-font = (
-  "Space Grotesk",
-  "Source Han Sans SC",
-  "Source Han Sans TC",
-  "Noto Sans CJK SC",
-  "Noto Sans CJK TC",
-  "Noto Sans CJK JP",
-  "Noto Sans CJK HK",
+  "Noto Serif",
+  "Source Han Serif SC",
+  "Source Han Serif TC",
+  "Noto Serif CJK SC",
+  "Noto Serif CJK TC",
+  "Noto Serif CJK JP",
+  "Noto Serif CJK HK",
 )
 
 #let code-font = (

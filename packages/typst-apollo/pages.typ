@@ -76,31 +76,31 @@
   // The body text size is chosen per layout width so that, after the runtime
   // scales the page to fill the container (scale = container width / page
   // width), the rendered size matches the site's markdown body text size
-  // (html font-size: 16 / 16.5 / 17 / 18px at 640 / 720 / 960px viewports).
+  // (html font-size: 16 / 16 / 16 / 17px at 640 / 720 / 960px viewports).
   set text(
     font: main-font,
     size: if is-web-target {
       let w = page-width
       if w >= 902pt {
-        17.2pt
+        16.3pt
       } else if w >= 790pt {
-        15.9pt
+        15.1pt
       } else if w >= 674pt {
-        15.7pt
-      } else if w >= 600pt {
-        15.6pt
-      } else if w >= 560pt {
-        15.5pt
-      } else if w >= 470pt {
-        14.6pt
-      } else if w >= 380pt {
-        14.3pt
-      } else if w >= 330pt {
         14.9pt
+      } else if w >= 600pt {
+        14.8pt
+      } else if w >= 560pt {
+        14.7pt
+      } else if w >= 470pt {
+        13.9pt
+      } else if w >= 380pt {
+        13.6pt
+      } else if w >= 330pt {
+        14.2pt
       } else if w >= 300pt {
-        15.2pt
+        14.4pt
       } else {
-        16pt
+        15.2pt
       }
     } else {
       16pt

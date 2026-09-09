@@ -13,8 +13,8 @@
   --border-color: var(--border-color);
 
   /* Fonts */
-  --text-font: 'Jetbrains Mono', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
-  --header-font: 'Space Grotesk', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Microsoft YaHei', 'Helvetica', sans-serif;
+  --text-font: 'Noto Serif', 'Noto Serif SC', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Songti SC', 'SimSun', serif;
+  --header-font: 'Noto Serif', 'Noto Serif SC', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Songti SC', serif;
   --code-font: 'Jetbrains Mono';
 }
 
@@ -34,7 +34,7 @@ html {
 
 @media all and (min-width:600px) {
   html {
-    font-size: 16.5px;
+    font-size: 16px;
   }
   .content {
     padding: 0 18px;
@@ -43,7 +43,7 @@ html {
 
 @media all and (min-width:768px) {
   html {
-    font-size: 17px;
+    font-size: 16px;
   }
   .content {
     padding: 0 24px;
@@ -52,7 +52,7 @@ html {
 
 @media all and (min-width:960px) {
   html {
-    font-size: 18px;
+    font-size: 17px;
   }
   .content {
     padding: 0 24px;
