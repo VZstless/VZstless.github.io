@@ -7,3 +7,6 @@ target/
 static/apollo-typst
 static/typst
 static/wasm
+# avatar cache downloaded at build time (typ/friends/friends.toml)
+typ/*/avatars/
+typ/*/avatars.json

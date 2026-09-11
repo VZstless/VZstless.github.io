@@ -1,0 +1,23 @@
+# Friends of this blog.
+#
+# Each entry:
+#   name        - display name (required)
+#   url         - link to their site (required)
+#   avatar      - avatar image URL, downloaded at build time (optional)
+#   description - short intro (required)
+#
+# If `avatar` is missing (or the URL is unreachable at build time),
+# a placeholder with the first letter of the name is rendered instead.
+
+[[friend]]
+name = "Shiokiri"
+url = "https://shiokiri.com/"
+avatar = "https://avatars.githubusercontent.com/u/46066107?v=4"
+description = "囿于真实和黑色虚无的交界"
+
+[[friend]]
+name = "Ventus Uta"
+url = "https://ventusuta.com/"
+avatar = "https://avatars.githubusercontent.com/u/135337676?v=4"
+description = "8点、Classroom见"
+
