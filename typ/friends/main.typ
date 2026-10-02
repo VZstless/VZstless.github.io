@@ -1,5 +1,5 @@
 #import "@preview/typst-apollo:0.1.0": pages
-#import "@preview/shiroa:0.2.3": target
+#import "@preview/shiroa:0.2.3": target, get-page-width
 #import pages: *
 
 #show: project.with(
@@ -69,10 +69,12 @@
   ],
 )
 
+#let card-columns = if get-page-width() < 560pt { (1fr,) } else { (1fr, 1fr) }
+
 == If you want to put your blog link here, contact me through social media!
 
 #grid(
-  columns: (1fr, 1fr),
+  columns: card-columns,
   gutter: 10pt,
 
   ..friends.enumerate().map(((i, f)) => card(avatars.at(i, default: none), f)),
