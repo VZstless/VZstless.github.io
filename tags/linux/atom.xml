@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>VZstless - linux</title>
+    <link rel="self" type="application/atom+xml" href="https://vzstless.moe/tags/linux/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://vzstless.moe/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-09-02T00:00:00+00:00</updated>
+    <id>https://vzstless.moe/tags/linux/atom.xml</id>
+    <entry xml:lang="en">
+        <title>物理机元年</title>
+        <published>2026-09-02T00:00:00+00:00</published>
+        <updated>2026-09-02T00:00:00+00:00</updated>
+        <link rel="alternate" type="text/html" href="https://vzstless.moe/posts/anno-physical-machine/"/>
+        <id>https://vzstless.moe/posts/anno-physical-machine/</id>
+    </entry>
+</feed>
