@@ -10,3 +10,5 @@ static/wasm
 # avatar cache downloaded at build time (typ/friends/friends.toml)
 typ/*/avatars/
 typ/*/avatars.json
+# fonts downloaded at build time (scripts/fetch-fonts.js)
+fonts/

@@ -13,6 +13,9 @@
 
 
 #let main-font = (
+  // LXGW WenKai Screen is fetched into `fonts/` by `scripts/fetch-fonts.js`.
+  // If it is missing, Typst falls back to the fonts below.
+  "LXGW WenKai Screen",
   "Noto Serif",
   "Source Han Serif SC",
   "Source Han Serif TC",
@@ -24,6 +27,7 @@
 )
 
 #let header-font = (
+  "LXGW WenKai Screen",
   "Noto Serif",
   "Source Han Serif SC",
   "Source Han Serif TC",
@@ -37,6 +41,12 @@
   "JetBrains Mono",
   "DejaVu Sans Mono",
 )
+
+// LXGW WenKai / WenKai Screen only ship a single weight (their bold was renamed
+// to Medium, and the Screen edition *is* that Medium face), so a `weight: "bold"`
+// request would silently render as regular. Emulate bold by stroking the glyphs,
+// the same way browsers synthesize bold for single-weight families.
+#let faux-bold-stroke = 0.02em
 
 #let code-theme-file = theme-style.at("code-theme")
 

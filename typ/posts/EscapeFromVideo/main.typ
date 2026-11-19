@@ -15,7 +15,7 @@
 
 #set par(justify: true)
 
-#emph(text(weight: "bold")[
+#emph(strong[
   注意：本文的目的不在于培养反社会人格。
 ])
 

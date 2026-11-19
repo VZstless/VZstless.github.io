@@ -16,6 +16,14 @@ jobs:
       - name: checkout
         uses: actions/checkout@v5
 
+      # `yarn build:typ` downloads LXGW WenKai Screen (26 MiB) into `fonts/`,
+      # which is gitignored. Cache it so repeat builds skip the download.
+      - name: Cache Typst fonts
+        uses: actions/cache@v4
+        with:
+          path: fonts
+          key: typst-fonts-lxgw-wenkai-screen-v1.530
+
       - name: Install typst-ts-cli
         uses: taiki-e/cache-cargo-install-action@v3
         with:
@@ -25,6 +33,7 @@ jobs:
           locked: true
 
       - name: Install CJK fonts for Typst
+        # Fallback fonts only: the blog's own font is fetched by `yarn build:typ`.
         run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
 
       - name: Setup Node.js Environment

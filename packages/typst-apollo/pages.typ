@@ -148,6 +148,9 @@
   // link setting
   show link: set text(fill: dash-color)
 
+  // The font family has no bold face (see `faux-bold-stroke` in theme.typ).
+  show strong: it => text(stroke: faux-bold-stroke, it.body)
+
   // math setting
   show math.equation: set text(weight: 400)
 

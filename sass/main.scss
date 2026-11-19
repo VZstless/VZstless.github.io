@@ -13,8 +13,14 @@
   --border-color: var(--border-color);
 
   /* Fonts */
-  --text-font: 'Noto Serif', 'Noto Serif SC', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Songti SC', 'SimSun', serif;
-  --header-font: 'Noto Serif', 'Noto Serif SC', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Songti SC', serif;
+  /* 'LXGW WenKai Screen' is loaded from the CDN (see templates/partials/header.html).
+     The plain 'LXGW WenKai' names are used as a fallback for visitors who have the
+     font installed locally, e.g. when the CDN is unreachable.
+     The font only ships a regular weight, so bold text (font-weight >= 600) is
+     synthesized by the browser, which is why `font-synthesis` is left at its
+     default value. */
+  --text-font: 'LXGW WenKai Screen', 'LXGW WenKai', 'LXGW WenKai GB', 'Noto Serif', 'Noto Serif SC', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Songti SC', 'SimSun', serif;
+  --header-font: 'LXGW WenKai Screen', 'LXGW WenKai', 'LXGW WenKai GB', 'Noto Serif', 'Noto Serif SC', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Songti SC', serif;
   --code-font: 'Jetbrains Mono';
 }
 
