@@ -67,11 +67,15 @@
         <link rel="icon" type="image/x-icon" href="/{{ config.extra.favicon }}" />
     {% endif %}
 
+    {# LXGW WenKai Screen, self-hosted: `scripts/fetch-fonts.js` mirrors the
+       unicode-range subsetted webfont into `static/webfonts/lxgw-wenkai` at build
+       time, so it is deployed with the site and used by every page (and does
+       not depend on a third-party CDN being reachable). #}
+    <link rel="stylesheet" href={{ get_url(path="webfonts/lxgw-wenkai/lxgwwenkaiscreen.css") }} />
+
     {# Font from cdn or disk #}
     {% if config.extra.use_cdn | default(value=false) %}
-        {# LXGW WenKai Screen: split into unicode-range subsets, so only the glyph chunks actually used are downloaded #}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@4.5.8/index.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif@5.3.0/400.css">

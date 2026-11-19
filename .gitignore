@@ -12,3 +12,4 @@ typ/*/avatars/
 typ/*/avatars.json
 # fonts downloaded at build time (scripts/fetch-fonts.js)
 fonts/
+static/webfonts/lxgw-wenkai/

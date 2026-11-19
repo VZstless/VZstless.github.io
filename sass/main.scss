@@ -13,9 +13,11 @@
   --border-color: var(--border-color);
 
   /* Fonts */
-  /* 'LXGW WenKai Screen' is loaded from the CDN (see templates/partials/header.html).
+  /* 'LXGW WenKai Screen' is self-hosted: `scripts/fetch-fonts.js` mirrors the
+     unicode-range subsetted webfont into `static/webfonts/lxgw-wenkai`, which is
+     linked from every page (see templates/partials/header.html).
      The plain 'LXGW WenKai' names are used as a fallback for visitors who have the
-     font installed locally, e.g. when the CDN is unreachable.
+     font installed locally, e.g. when the build did not fetch the webfont.
      The font only ships a regular weight, so bold text (font-weight >= 600) is
      synthesized by the browser, which is why `font-synthesis` is left at its
      default value. */

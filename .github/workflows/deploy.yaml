@@ -16,13 +16,17 @@ jobs:
       - name: checkout
         uses: actions/checkout@v5
 
-      # `yarn build:typ` downloads LXGW WenKai Screen (26 MiB) into `fonts/`,
-      # which is gitignored. Cache it so repeat builds skip the download.
-      - name: Cache Typst fonts
+      # `yarn build:typ` downloads LXGW WenKai Screen (26 MiB) into `fonts/` for
+      # Typst and mirrors the subsetted webfont into `static/webfonts/` (deployed
+      # with the site, so every page uses it). Both are gitignored, so cache
+      # them to make repeat builds skip the downloads.
+      - name: Cache fonts
         uses: actions/cache@v4
         with:
-          path: fonts
-          key: typst-fonts-lxgw-wenkai-screen-v1.530
+          path: |
+            fonts
+            static/webfonts/lxgw-wenkai
+          key: fonts-lxgw-wenkai-screen-v1.530-webfont-1.7.0
 
       - name: Install typst-ts-cli
         uses: taiki-e/cache-cargo-install-action@v3
