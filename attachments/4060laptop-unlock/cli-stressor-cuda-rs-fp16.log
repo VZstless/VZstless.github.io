@@ -1,0 +1,860 @@
+$ ./cli-stressor-cuda-rs-v0.3.1-alpha.1-linux-amd64 --precisions fp16  --kernel-types gemm --duration 1000 --burst-iters 200 --minor-mixture-rate 0 --matrix-sizes 4096
+[GPU] Using default PCI-sorted CUDA index: 0
+[CUDA] Selected device index 0 (sorted position 0) by index: NVIDIA GeForce RTX 4060 Laptop GPU
+Testing Device: NVIDIA GeForce RTX 4060 Laptop GPU
+Compute Capability: SM8.9
+Video Memory: 7.7 GB
+[self-test] pattern_clean: OK (total_errors=0, done=1024 (expected 1024))
+[self-test] injection_capture: OK (total_errors=1, idx=44474..44474 (want 44474..44474), xor=0x00400000 (want 0x00400000), bit_hist[22]=1)
+
+------------------------------------------------------------------------
+Starting mixed-kernel stress
+  Precisions: ["FP16"]
+  Duration: 1000.0 s
+  Warmup iterations: 3
+  Burst iterations: 200
+  Validation interval: 5.0 s
+  Validation size: 1024
+  Minor mixture rate: 0.00
+  Kernel types: [Gemm]
+  Kernel mixture: [KernelMixtureEntry { kind: Gemm, weight: 1.0 }]
+  Stream mode: Single (1 streams)
+[MIX] t=   0.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  34.91 TFLOPS(eqv)
+[MIX] t=   1.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  36.62 TFLOPS(eqv)
+[MIX] t=   2.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  37.36 TFLOPS(eqv)
+[MIX] t=   3.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  37.93 TFLOPS(eqv)
+[MIX] t=   4.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.32 TFLOPS(eqv)
+[MIX] t=   5.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  34.79 TFLOPS(eqv)
+[FP16] validate | abs=6.961e-2 | rel=1.309e2 | OK
+[MIX] t=   5.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.54 TFLOPS(eqv)
+[MIX] t=   6.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  34.19 TFLOPS(eqv)
+[MIX] t=   7.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.08 TFLOPS(eqv)
+[MIX] t=   8.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  34.92 TFLOPS(eqv)
+[MIX] t=   9.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.62 TFLOPS(eqv)
+[MIX] t=  10.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.15 TFLOPS(eqv)
+[FP16] validate | abs=7.123e-2 | rel=2.998e2 | OK
+[MIX] t=  11.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  37.12 TFLOPS(eqv)
+[MIX] t=  12.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.61 TFLOPS(eqv)
+[MIX] t=  12.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.98 TFLOPS(eqv)
+[MIX] t=  13.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.84 TFLOPS(eqv)
+[MIX] t=  14.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  36.33 TFLOPS(eqv)
+[MIX] t=  15.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  36.28 TFLOPS(eqv)
+[FP16] validate | abs=7.394e-2 | rel=5.489e2 | OK
+[MIX] t=  16.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  34.71 TFLOPS(eqv)
+[MIX] t=  17.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.95 TFLOPS(eqv)
+[MIX] t=  18.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  32.64 TFLOPS(eqv)
+[MIX] t=  18.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  37.21 TFLOPS(eqv)
+[MIX] t=  19.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  36.10 TFLOPS(eqv)
+[MIX] t=  20.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.33 TFLOPS(eqv)
+[FP16] validate | abs=7.544e-2 | rel=4.102e2 | OK
+[MIX] t=  21.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.55 TFLOPS(eqv)
+[MIX] t=  22.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.63 TFLOPS(eqv)
+[MIX] t=  23.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.28 TFLOPS(eqv)
+[MIX] t=  24.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  34.92 TFLOPS(eqv)
+[MIX] t=  24.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  35.82 TFLOPS(eqv)
+[MIX] t=  25.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  32.31 TFLOPS(eqv)
+[FP16] validate | abs=7.156e-2 | rel=5.889e3 | OK
+[MIX] t=  27.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.01 TFLOPS(eqv)
+[MIX] t=  29.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.22 TFLOPS(eqv)
+[MIX] t=  30.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.70 TFLOPS(eqv)
+[MIX] t=  32.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.59 TFLOPS(eqv)
+[FP16] validate | abs=7.021e-2 | rel=7.762e2 | OK
+[MIX] t=  33.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.15 TFLOPS(eqv)
+[MIX] t=  35.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.90 TFLOPS(eqv)
+[MIX] t=  36.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.99 TFLOPS(eqv)
+[MIX] t=  38.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.80 TFLOPS(eqv)
+[FP16] validate | abs=7.925e-2 | rel=1.292e2 | OK
+[MIX] t=  40.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.30 TFLOPS(eqv)
+[MIX] t=  41.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.60 TFLOPS(eqv)
+[MIX] t=  42.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.97 TFLOPS(eqv)
+[MIX] t=  44.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.11 TFLOPS(eqv)
+[FP16] validate | abs=8.965e-2 | rel=1.928e2 | OK
+[MIX] t=  46.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.66 TFLOPS(eqv)
+[MIX] t=  47.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.46 TFLOPS(eqv)
+[MIX] t=  49.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.89 TFLOPS(eqv)
+[MIX] t=  50.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.81 TFLOPS(eqv)
+[FP16] validate | abs=7.689e-2 | rel=7.999e2 | OK
+[MIX] t=  52.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.42 TFLOPS(eqv)
+[MIX] t=  53.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.48 TFLOPS(eqv)
+[MIX] t=  55.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.84 TFLOPS(eqv)
+[MIX] t=  56.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.93 TFLOPS(eqv)
+[FP16] validate | abs=8.549e-2 | rel=3.815e2 | OK
+[MIX] t=  58.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.22 TFLOPS(eqv)
+[MIX] t=  59.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.67 TFLOPS(eqv)
+[MIX] t=  61.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.00 TFLOPS(eqv)
+[MIX] t=  62.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.78 TFLOPS(eqv)
+[FP16] validate | abs=8.136e-2 | rel=6.721e1 | OK
+[MIX] t=  64.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.96 TFLOPS(eqv)
+[MIX] t=  65.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.26 TFLOPS(eqv)
+[MIX] t=  67.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.50 TFLOPS(eqv)
+[MIX] t=  68.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.74 TFLOPS(eqv)
+[FP16] validate | abs=7.485e-2 | rel=2.188e2 | OK
+[MIX] t=  70.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.11 TFLOPS(eqv)
+[MIX] t=  71.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.63 TFLOPS(eqv)
+[MIX] t=  73.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.54 TFLOPS(eqv)
+[MIX] t=  74.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.77 TFLOPS(eqv)
+[FP16] validate | abs=8.113e-2 | rel=1.886e2 | OK
+[MIX] t=  76.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.03 TFLOPS(eqv)
+[MIX] t=  77.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.19 TFLOPS(eqv)
+[MIX] t=  79.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.08 TFLOPS(eqv)
+[MIX] t=  81.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.04 TFLOPS(eqv)
+[FP16] validate | abs=7.161e-2 | rel=3.805e2 | OK
+[MIX] t=  82.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.90 TFLOPS(eqv)
+[MIX] t=  84.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.90 TFLOPS(eqv)
+[MIX] t=  85.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.66 TFLOPS(eqv)
+[MIX] t=  87.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.29 TFLOPS(eqv)
+[FP16] validate | abs=6.785e-2 | rel=2.912e2 | OK
+[MIX] t=  88.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.19 TFLOPS(eqv)
+[MIX] t=  90.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.59 TFLOPS(eqv)
+[MIX] t=  91.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.37 TFLOPS(eqv)
+[MIX] t=  93.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.32 TFLOPS(eqv)
+[FP16] validate | abs=8.136e-2 | rel=1.141e2 | OK
+[MIX] t=  94.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.54 TFLOPS(eqv)
+[MIX] t=  96.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.08 TFLOPS(eqv)
+[MIX] t=  97.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.06 TFLOPS(eqv)
+[MIX] t=  99.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.43 TFLOPS(eqv)
+[FP16] validate | abs=7.084e-2 | rel=4.124e2 | OK
+[MIX] t= 100.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.29 TFLOPS(eqv)
+[MIX] t= 102.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.26 TFLOPS(eqv)
+[MIX] t= 103.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.66 TFLOPS(eqv)
+[MIX] t= 105.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.27 TFLOPS(eqv)
+[FP16] validate | abs=7.341e-2 | rel=8.282e1 | OK
+[MIX] t= 106.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.41 TFLOPS(eqv)
+[MIX] t= 108.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.21 TFLOPS(eqv)
+[MIX] t= 109.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.27 TFLOPS(eqv)
+[MIX] t= 111.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.10 TFLOPS(eqv)
+[FP16] validate | abs=7.823e-2 | rel=8.692e1 | OK
+[MIX] t= 112.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.58 TFLOPS(eqv)
+[MIX] t= 114.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.78 TFLOPS(eqv)
+[MIX] t= 115.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.88 TFLOPS(eqv)
+[MIX] t= 117.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.26 TFLOPS(eqv)
+[FP16] validate | abs=7.106e-2 | rel=7.915e2 | OK
+[MIX] t= 119.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.10 TFLOPS(eqv)
+[MIX] t= 120.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.51 TFLOPS(eqv)
+[MIX] t= 122.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.58 TFLOPS(eqv)
+[MIX] t= 123.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.01 TFLOPS(eqv)
+[FP16] validate | abs=7.414e-2 | rel=1.229e4 | OK
+[MIX] t= 125.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.17 TFLOPS(eqv)
+[MIX] t= 126.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.00 TFLOPS(eqv)
+[MIX] t= 128.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.18 TFLOPS(eqv)
+[MIX] t= 129.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.94 TFLOPS(eqv)
+[FP16] validate | abs=7.838e-2 | rel=1.282e3 | OK
+[MIX] t= 131.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.54 TFLOPS(eqv)
+[MIX] t= 132.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.56 TFLOPS(eqv)
+[MIX] t= 134.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.68 TFLOPS(eqv)
+[MIX] t= 135.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.66 TFLOPS(eqv)
+[FP16] validate | abs=7.434e-2 | rel=1.998e2 | OK
+[MIX] t= 137.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.97 TFLOPS(eqv)
+[MIX] t= 138.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.65 TFLOPS(eqv)
+[MIX] t= 140.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.42 TFLOPS(eqv)
+[MIX] t= 141.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.51 TFLOPS(eqv)
+[FP16] validate | abs=7.884e-2 | rel=1.780e3 | OK
+[MIX] t= 143.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.89 TFLOPS(eqv)
+[MIX] t= 144.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.65 TFLOPS(eqv)
+[MIX] t= 146.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.12 TFLOPS(eqv)
+[MIX] t= 147.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.37 TFLOPS(eqv)
+[FP16] validate | abs=8.122e-2 | rel=4.842e2 | OK
+[MIX] t= 149.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.86 TFLOPS(eqv)
+[MIX] t= 150.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.31 TFLOPS(eqv)
+[MIX] t= 152.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.81 TFLOPS(eqv)
+[MIX] t= 153.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.62 TFLOPS(eqv)
+[FP16] validate | abs=6.909e-2 | rel=1.164e2 | OK
+[MIX] t= 155.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.11 TFLOPS(eqv)
+[MIX] t= 157.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.76 TFLOPS(eqv)
+[MIX] t= 158.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.40 TFLOPS(eqv)
+[MIX] t= 160.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.46 TFLOPS(eqv)
+[FP16] validate | abs=7.031e-2 | rel=9.430e1 | OK
+[MIX] t= 161.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.66 TFLOPS(eqv)
+[MIX] t= 163.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.82 TFLOPS(eqv)
+[MIX] t= 164.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.18 TFLOPS(eqv)
+[MIX] t= 166.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.92 TFLOPS(eqv)
+[FP16] validate | abs=8.183e-2 | rel=1.119e3 | OK
+[MIX] t= 167.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.86 TFLOPS(eqv)
+[MIX] t= 169.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.31 TFLOPS(eqv)
+[MIX] t= 170.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.91 TFLOPS(eqv)
+[MIX] t= 172.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.04 TFLOPS(eqv)
+[FP16] validate | abs=7.475e-2 | rel=3.375e2 | OK
+[MIX] t= 173.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.99 TFLOPS(eqv)
+[MIX] t= 175.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.21 TFLOPS(eqv)
+[MIX] t= 176.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.72 TFLOPS(eqv)
+[MIX] t= 178.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.01 TFLOPS(eqv)
+[FP16] validate | abs=6.931e-2 | rel=3.975e2 | OK
+[MIX] t= 179.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.35 TFLOPS(eqv)
+[MIX] t= 181.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.48 TFLOPS(eqv)
+[MIX] t= 182.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.26 TFLOPS(eqv)
+[MIX] t= 184.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.01 TFLOPS(eqv)
+[FP16] validate | abs=7.637e-2 | rel=1.720e2 | OK
+[MIX] t= 185.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.25 TFLOPS(eqv)
+[MIX] t= 187.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.03 TFLOPS(eqv)
+[MIX] t= 189.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.66 TFLOPS(eqv)
+[MIX] t= 190.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.80 TFLOPS(eqv)
+[FP16] validate | abs=8.109e-2 | rel=2.529e3 | OK
+[MIX] t= 192.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.55 TFLOPS(eqv)
+[MIX] t= 193.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.51 TFLOPS(eqv)
+[MIX] t= 195.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.01 TFLOPS(eqv)
+[MIX] t= 196.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.09 TFLOPS(eqv)
+[FP16] validate | abs=7.825e-2 | rel=1.253e2 | OK
+[MIX] t= 198.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.25 TFLOPS(eqv)
+[MIX] t= 199.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.83 TFLOPS(eqv)
+[MIX] t= 201.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.89 TFLOPS(eqv)
+[MIX] t= 202.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.58 TFLOPS(eqv)
+[FP16] validate | abs=6.970e-2 | rel=7.053e1 | OK
+[MIX] t= 204.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.65 TFLOPS(eqv)
+[MIX] t= 205.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.93 TFLOPS(eqv)
+[MIX] t= 207.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.35 TFLOPS(eqv)
+[MIX] t= 208.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.90 TFLOPS(eqv)
+[FP16] validate | abs=7.787e-2 | rel=1.824e4 | OK
+[MIX] t= 210.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.11 TFLOPS(eqv)
+[MIX] t= 212.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.80 TFLOPS(eqv)
+[MIX] t= 213.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.62 TFLOPS(eqv)
+[MIX] t= 215.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.85 TFLOPS(eqv)
+[FP16] validate | abs=7.150e-2 | rel=1.847e4 | OK
+[MIX] t= 216.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.81 TFLOPS(eqv)
+[MIX] t= 218.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.28 TFLOPS(eqv)
+[MIX] t= 220.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.66 TFLOPS(eqv)
+[MIX] t= 221.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.80 TFLOPS(eqv)
+[FP16] validate | abs=7.356e-2 | rel=1.919e2 | OK
+[MIX] t= 223.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.48 TFLOPS(eqv)
+[MIX] t= 224.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.26 TFLOPS(eqv)
+[MIX] t= 226.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.66 TFLOPS(eqv)
+[MIX] t= 227.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.55 TFLOPS(eqv)
+[FP16] validate | abs=6.991e-2 | rel=9.212e1 | OK
+[MIX] t= 229.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.40 TFLOPS(eqv)
+[MIX] t= 230.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.69 TFLOPS(eqv)
+[MIX] t= 232.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.53 TFLOPS(eqv)
+[MIX] t= 233.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.28 TFLOPS(eqv)
+[FP16] validate | abs=7.529e-2 | rel=1.515e2 | OK
+[MIX] t= 235.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.67 TFLOPS(eqv)
+[MIX] t= 236.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.32 TFLOPS(eqv)
+[MIX] t= 238.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.07 TFLOPS(eqv)
+[MIX] t= 240.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.75 TFLOPS(eqv)
+[FP16] validate | abs=8.394e-2 | rel=5.765e1 | OK
+[MIX] t= 241.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.45 TFLOPS(eqv)
+[MIX] t= 243.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.00 TFLOPS(eqv)
+[MIX] t= 244.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.15 TFLOPS(eqv)
+[MIX] t= 246.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.77 TFLOPS(eqv)
+[FP16] validate | abs=7.356e-2 | rel=6.862e1 | OK
+[MIX] t= 247.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.27 TFLOPS(eqv)
+[MIX] t= 249.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  21.37 TFLOPS(eqv)
+[MIX] t= 250.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.55 TFLOPS(eqv)
+[MIX] t= 252.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.81 TFLOPS(eqv)
+[FP16] validate | abs=7.356e-2 | rel=1.346e2 | OK
+[MIX] t= 253.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.44 TFLOPS(eqv)
+[MIX] t= 255.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.79 TFLOPS(eqv)
+[MIX] t= 256.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.33 TFLOPS(eqv)
+[MIX] t= 258.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.06 TFLOPS(eqv)
+[FP16] validate | abs=7.896e-2 | rel=6.251e2 | OK
+[MIX] t= 260.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.18 TFLOPS(eqv)
+[MIX] t= 261.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.47 TFLOPS(eqv)
+[MIX] t= 263.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.35 TFLOPS(eqv)
+[MIX] t= 264.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.58 TFLOPS(eqv)
+[FP16] validate | abs=7.175e-2 | rel=2.750e2 | OK
+[MIX] t= 266.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.27 TFLOPS(eqv)
+[MIX] t= 267.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.76 TFLOPS(eqv)
+[MIX] t= 269.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.02 TFLOPS(eqv)
+[MIX] t= 270.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.37 TFLOPS(eqv)
+[FP16] validate | abs=7.506e-2 | rel=1.480e4 | OK
+[MIX] t= 272.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.91 TFLOPS(eqv)
+[MIX] t= 273.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.30 TFLOPS(eqv)
+[MIX] t= 275.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.35 TFLOPS(eqv)
+[MIX] t= 276.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.62 TFLOPS(eqv)
+[FP16] validate | abs=7.217e-2 | rel=1.758e2 | OK
+[MIX] t= 278.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.30 TFLOPS(eqv)
+[MIX] t= 279.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.61 TFLOPS(eqv)
+[MIX] t= 281.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.20 TFLOPS(eqv)
+[MIX] t= 282.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.44 TFLOPS(eqv)
+[FP16] validate | abs=6.954e-2 | rel=1.752e2 | OK
+[MIX] t= 284.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.26 TFLOPS(eqv)
+[MIX] t= 285.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.85 TFLOPS(eqv)
+[MIX] t= 287.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.78 TFLOPS(eqv)
+[MIX] t= 289.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.63 TFLOPS(eqv)
+[FP16] validate | abs=7.133e-2 | rel=4.877e2 | OK
+[MIX] t= 290.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.12 TFLOPS(eqv)
+[MIX] t= 292.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.82 TFLOPS(eqv)
+[MIX] t= 293.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.99 TFLOPS(eqv)
+[MIX] t= 295.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.26 TFLOPS(eqv)
+[FP16] validate | abs=7.228e-2 | rel=4.386e2 | OK
+[MIX] t= 296.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.33 TFLOPS(eqv)
+[MIX] t= 298.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.73 TFLOPS(eqv)
+[MIX] t= 299.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.45 TFLOPS(eqv)
+[MIX] t= 301.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.87 TFLOPS(eqv)
+[FP16] validate | abs=7.047e-2 | rel=2.841e2 | OK
+[MIX] t= 302.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.06 TFLOPS(eqv)
+[MIX] t= 304.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.45 TFLOPS(eqv)
+[MIX] t= 305.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.84 TFLOPS(eqv)
+[MIX] t= 307.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.52 TFLOPS(eqv)
+[FP16] validate | abs=6.592e-2 | rel=5.588e2 | OK
+[MIX] t= 308.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.84 TFLOPS(eqv)
+[MIX] t= 310.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.14 TFLOPS(eqv)
+[MIX] t= 311.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.24 TFLOPS(eqv)
+[MIX] t= 313.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.69 TFLOPS(eqv)
+[FP16] validate | abs=7.487e-2 | rel=9.784e1 | OK
+[MIX] t= 315.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.29 TFLOPS(eqv)
+[MIX] t= 316.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.83 TFLOPS(eqv)
+[MIX] t= 318.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.01 TFLOPS(eqv)
+[MIX] t= 319.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.10 TFLOPS(eqv)
+[FP16] validate | abs=7.423e-2 | rel=1.524e2 | OK
+[MIX] t= 321.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.19 TFLOPS(eqv)
+[MIX] t= 322.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.30 TFLOPS(eqv)
+[MIX] t= 324.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.42 TFLOPS(eqv)
+[MIX] t= 325.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  21.31 TFLOPS(eqv)
+[FP16] validate | abs=7.265e-2 | rel=3.045e2 | OK
+[MIX] t= 327.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.96 TFLOPS(eqv)
+[MIX] t= 328.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.33 TFLOPS(eqv)
+[MIX] t= 330.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.97 TFLOPS(eqv)
+[MIX] t= 331.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.36 TFLOPS(eqv)
+[FP16] validate | abs=6.859e-2 | rel=1.236e3 | OK
+[MIX] t= 333.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.69 TFLOPS(eqv)
+[MIX] t= 334.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.15 TFLOPS(eqv)
+[MIX] t= 336.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.78 TFLOPS(eqv)
+[MIX] t= 338.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.26 TFLOPS(eqv)
+[FP16] validate | abs=8.559e-2 | rel=2.248e3 | OK
+[MIX] t= 339.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.50 TFLOPS(eqv)
+[MIX] t= 341.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.90 TFLOPS(eqv)
+[MIX] t= 342.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.15 TFLOPS(eqv)
+[MIX] t= 344.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.36 TFLOPS(eqv)
+[FP16] validate | abs=8.223e-2 | rel=4.062e3 | OK
+[MIX] t= 345.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.76 TFLOPS(eqv)
+[MIX] t= 347.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.62 TFLOPS(eqv)
+[MIX] t= 348.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.55 TFLOPS(eqv)
+[MIX] t= 350.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.32 TFLOPS(eqv)
+[FP16] validate | abs=7.188e-2 | rel=2.234e2 | OK
+[MIX] t= 351.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.90 TFLOPS(eqv)
+[MIX] t= 353.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.00 TFLOPS(eqv)
+[MIX] t= 354.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.94 TFLOPS(eqv)
+[MIX] t= 356.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.89 TFLOPS(eqv)
+[FP16] validate | abs=6.958e-2 | rel=4.434e3 | OK
+[MIX] t= 357.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.71 TFLOPS(eqv)
+[MIX] t= 359.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.37 TFLOPS(eqv)
+[MIX] t= 360.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.01 TFLOPS(eqv)
+[MIX] t= 362.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.30 TFLOPS(eqv)
+[FP16] validate | abs=7.710e-2 | rel=7.094e1 | OK
+[MIX] t= 364.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.33 TFLOPS(eqv)
+[MIX] t= 365.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.15 TFLOPS(eqv)
+[MIX] t= 367.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.84 TFLOPS(eqv)
+[MIX] t= 368.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.15 TFLOPS(eqv)
+[FP16] validate | abs=6.935e-2 | rel=1.150e2 | OK
+[MIX] t= 370.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.86 TFLOPS(eqv)
+[MIX] t= 371.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.38 TFLOPS(eqv)
+[MIX] t= 373.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.26 TFLOPS(eqv)
+[MIX] t= 374.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.66 TFLOPS(eqv)
+[FP16] validate | abs=7.239e-2 | rel=1.525e2 | OK
+[MIX] t= 376.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.96 TFLOPS(eqv)
+[MIX] t= 377.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.76 TFLOPS(eqv)
+[MIX] t= 379.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.94 TFLOPS(eqv)
+[MIX] t= 380.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.75 TFLOPS(eqv)
+[FP16] validate | abs=6.706e-2 | rel=1.617e2 | OK
+[MIX] t= 382.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.06 TFLOPS(eqv)
+[MIX] t= 383.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.11 TFLOPS(eqv)
+[MIX] t= 385.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.98 TFLOPS(eqv)
+[MIX] t= 387.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.12 TFLOPS(eqv)
+[FP16] validate | abs=7.605e-2 | rel=1.041e2 | OK
+[MIX] t= 388.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.36 TFLOPS(eqv)
+[MIX] t= 390.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.64 TFLOPS(eqv)
+[MIX] t= 391.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.45 TFLOPS(eqv)
+[MIX] t= 393.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.29 TFLOPS(eqv)
+[FP16] validate | abs=7.730e-2 | rel=5.419e1 | OK
+[MIX] t= 394.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.38 TFLOPS(eqv)
+[MIX] t= 396.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.39 TFLOPS(eqv)
+[MIX] t= 397.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.73 TFLOPS(eqv)
+[MIX] t= 399.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.08 TFLOPS(eqv)
+[FP16] validate | abs=7.111e-2 | rel=2.932e2 | OK
+[MIX] t= 400.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.05 TFLOPS(eqv)
+[MIX] t= 402.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  21.08 TFLOPS(eqv)
+[MIX] t= 403.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.77 TFLOPS(eqv)
+[MIX] t= 405.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.64 TFLOPS(eqv)
+[FP16] validate | abs=7.680e-2 | rel=4.059e2 | OK
+[MIX] t= 406.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.74 TFLOPS(eqv)
+[MIX] t= 408.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.84 TFLOPS(eqv)
+[MIX] t= 409.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.53 TFLOPS(eqv)
+[MIX] t= 411.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.68 TFLOPS(eqv)
+[FP16] validate | abs=7.988e-2 | rel=9.732e1 | OK
+[MIX] t= 413.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.06 TFLOPS(eqv)
+[MIX] t= 414.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.80 TFLOPS(eqv)
+[MIX] t= 416.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.20 TFLOPS(eqv)
+[MIX] t= 417.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.04 TFLOPS(eqv)
+[FP16] validate | abs=7.700e-2 | rel=6.966e1 | OK
+[MIX] t= 419.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.74 TFLOPS(eqv)
+[MIX] t= 420.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.21 TFLOPS(eqv)
+[MIX] t= 422.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.19 TFLOPS(eqv)
+[MIX] t= 423.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.87 TFLOPS(eqv)
+[FP16] validate | abs=7.924e-2 | rel=8.985e1 | OK
+[MIX] t= 425.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.07 TFLOPS(eqv)
+[MIX] t= 426.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.63 TFLOPS(eqv)
+[MIX] t= 428.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.30 TFLOPS(eqv)
+[MIX] t= 429.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.14 TFLOPS(eqv)
+[FP16] validate | abs=8.521e-2 | rel=1.267e4 | OK
+[MIX] t= 431.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.85 TFLOPS(eqv)
+[MIX] t= 432.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.42 TFLOPS(eqv)
+[MIX] t= 434.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.30 TFLOPS(eqv)
+[MIX] t= 435.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.57 TFLOPS(eqv)
+[FP16] validate | abs=8.583e-2 | rel=4.200e2 | OK
+[MIX] t= 437.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.99 TFLOPS(eqv)
+[MIX] t= 438.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.26 TFLOPS(eqv)
+[MIX] t= 440.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.46 TFLOPS(eqv)
+[MIX] t= 441.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.44 TFLOPS(eqv)
+[FP16] validate | abs=7.144e-2 | rel=2.274e2 | OK
+[MIX] t= 443.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.47 TFLOPS(eqv)
+[MIX] t= 445.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.54 TFLOPS(eqv)
+[MIX] t= 446.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.72 TFLOPS(eqv)
+[MIX] t= 448.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.58 TFLOPS(eqv)
+[FP16] validate | abs=7.205e-2 | rel=4.922e2 | OK
+[MIX] t= 449.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.39 TFLOPS(eqv)
+[MIX] t= 451.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.29 TFLOPS(eqv)
+[MIX] t= 452.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.24 TFLOPS(eqv)
+[MIX] t= 454.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.85 TFLOPS(eqv)
+[FP16] validate | abs=7.794e-2 | rel=5.145e2 | OK
+[MIX] t= 455.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.08 TFLOPS(eqv)
+[MIX] t= 457.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.93 TFLOPS(eqv)
+[MIX] t= 458.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.39 TFLOPS(eqv)
+[MIX] t= 460.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.93 TFLOPS(eqv)
+[FP16] validate | abs=7.616e-2 | rel=2.395e3 | OK
+[MIX] t= 462.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.12 TFLOPS(eqv)
+[MIX] t= 463.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.96 TFLOPS(eqv)
+[MIX] t= 465.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.83 TFLOPS(eqv)
+[MIX] t= 466.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.00 TFLOPS(eqv)
+[FP16] validate | abs=7.512e-2 | rel=3.007e2 | OK
+[MIX] t= 468.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.11 TFLOPS(eqv)
+[MIX] t= 469.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.27 TFLOPS(eqv)
+[MIX] t= 471.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.62 TFLOPS(eqv)
+[MIX] t= 472.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.50 TFLOPS(eqv)
+[FP16] validate | abs=7.745e-2 | rel=5.874e1 | OK
+[MIX] t= 474.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.90 TFLOPS(eqv)
+[MIX] t= 475.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.60 TFLOPS(eqv)
+[MIX] t= 477.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.84 TFLOPS(eqv)
+[MIX] t= 478.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.57 TFLOPS(eqv)
+[FP16] validate | abs=7.655e-2 | rel=5.988e2 | OK
+[MIX] t= 480.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.86 TFLOPS(eqv)
+[MIX] t= 481.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.31 TFLOPS(eqv)
+[MIX] t= 483.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.51 TFLOPS(eqv)
+[MIX] t= 484.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.61 TFLOPS(eqv)
+[FP16] validate | abs=6.892e-2 | rel=4.260e2 | OK
+[MIX] t= 486.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.36 TFLOPS(eqv)
+[MIX] t= 488.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.80 TFLOPS(eqv)
+[MIX] t= 489.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.86 TFLOPS(eqv)
+[MIX] t= 491.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.95 TFLOPS(eqv)
+[FP16] validate | abs=6.509e-2 | rel=1.180e2 | OK
+[MIX] t= 492.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.72 TFLOPS(eqv)
+[MIX] t= 494.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.38 TFLOPS(eqv)
+[MIX] t= 495.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.37 TFLOPS(eqv)
+[MIX] t= 497.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.27 TFLOPS(eqv)
+[FP16] validate | abs=6.884e-2 | rel=1.094e2 | OK
+[MIX] t= 498.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.97 TFLOPS(eqv)
+[MIX] t= 500.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.83 TFLOPS(eqv)
+[MIX] t= 502.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.04 TFLOPS(eqv)
+[MIX] t= 503.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.35 TFLOPS(eqv)
+[FP16] validate | abs=6.740e-2 | rel=9.499e2 | OK
+[MIX] t= 505.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.68 TFLOPS(eqv)
+[MIX] t= 506.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.63 TFLOPS(eqv)
+[MIX] t= 508.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.90 TFLOPS(eqv)
+[MIX] t= 509.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.17 TFLOPS(eqv)
+[FP16] validate | abs=7.370e-2 | rel=1.707e2 | OK
+[MIX] t= 511.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.88 TFLOPS(eqv)
+[MIX] t= 512.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.66 TFLOPS(eqv)
+[MIX] t= 514.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.49 TFLOPS(eqv)
+[MIX] t= 515.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.78 TFLOPS(eqv)
+[FP16] validate | abs=7.298e-2 | rel=7.999e1 | OK
+[MIX] t= 517.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.83 TFLOPS(eqv)
+[MIX] t= 518.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.40 TFLOPS(eqv)
+[MIX] t= 520.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.81 TFLOPS(eqv)
+[MIX] t= 522.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.35 TFLOPS(eqv)
+[FP16] validate | abs=7.417e-2 | rel=5.785e2 | OK
+[MIX] t= 523.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.29 TFLOPS(eqv)
+[MIX] t= 525.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.15 TFLOPS(eqv)
+[MIX] t= 526.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.46 TFLOPS(eqv)
+[MIX] t= 528.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.15 TFLOPS(eqv)
+[FP16] validate | abs=7.838e-2 | rel=3.911e3 | OK
+[MIX] t= 529.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.92 TFLOPS(eqv)
+[MIX] t= 531.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.16 TFLOPS(eqv)
+[MIX] t= 532.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.42 TFLOPS(eqv)
+[MIX] t= 534.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.57 TFLOPS(eqv)
+[FP16] validate | abs=7.260e-2 | rel=5.494e1 | OK
+[MIX] t= 535.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.99 TFLOPS(eqv)
+[MIX] t= 537.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.54 TFLOPS(eqv)
+[MIX] t= 538.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.62 TFLOPS(eqv)
+[MIX] t= 540.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.97 TFLOPS(eqv)
+[FP16] validate | abs=6.769e-2 | rel=9.031e2 | OK
+[MIX] t= 542.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.03 TFLOPS(eqv)
+[MIX] t= 543.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.99 TFLOPS(eqv)
+[MIX] t= 545.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.79 TFLOPS(eqv)
+[MIX] t= 546.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.56 TFLOPS(eqv)
+[FP16] validate | abs=8.206e-2 | rel=6.234e2 | OK
+[MIX] t= 548.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.08 TFLOPS(eqv)
+[MIX] t= 549.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.85 TFLOPS(eqv)
+[MIX] t= 551.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.85 TFLOPS(eqv)
+[MIX] t= 552.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.12 TFLOPS(eqv)
+[FP16] validate | abs=7.365e-2 | rel=3.555e2 | OK
+[MIX] t= 554.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.39 TFLOPS(eqv)
+[MIX] t= 555.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.75 TFLOPS(eqv)
+[MIX] t= 557.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.35 TFLOPS(eqv)
+[MIX] t= 559.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.01 TFLOPS(eqv)
+[FP16] validate | abs=7.880e-2 | rel=6.991e2 | OK
+[MIX] t= 560.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.25 TFLOPS(eqv)
+[MIX] t= 562.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.08 TFLOPS(eqv)
+[MIX] t= 563.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.26 TFLOPS(eqv)
+[MIX] t= 565.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.97 TFLOPS(eqv)
+[FP16] validate | abs=6.783e-2 | rel=1.920e2 | OK
+[MIX] t= 566.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.64 TFLOPS(eqv)
+[MIX] t= 568.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.13 TFLOPS(eqv)
+[MIX] t= 569.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.24 TFLOPS(eqv)
+[MIX] t= 571.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.30 TFLOPS(eqv)
+[FP16] validate | abs=7.291e-2 | rel=1.927e3 | OK
+[MIX] t= 573.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.87 TFLOPS(eqv)
+[MIX] t= 574.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.17 TFLOPS(eqv)
+[MIX] t= 576.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.33 TFLOPS(eqv)
+[MIX] t= 577.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.49 TFLOPS(eqv)
+[FP16] validate | abs=8.415e-2 | rel=1.757e2 | OK
+[MIX] t= 579.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.39 TFLOPS(eqv)
+[MIX] t= 580.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.29 TFLOPS(eqv)
+[MIX] t= 582.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.08 TFLOPS(eqv)
+[MIX] t= 583.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.28 TFLOPS(eqv)
+[FP16] validate | abs=8.472e-2 | rel=2.267e2 | OK
+[MIX] t= 585.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.70 TFLOPS(eqv)
+[MIX] t= 586.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.29 TFLOPS(eqv)
+[MIX] t= 588.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.92 TFLOPS(eqv)
+[MIX] t= 589.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.92 TFLOPS(eqv)
+[FP16] validate | abs=8.653e-2 | rel=1.947e2 | OK
+[MIX] t= 591.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.74 TFLOPS(eqv)
+[MIX] t= 592.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.91 TFLOPS(eqv)
+[MIX] t= 594.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.55 TFLOPS(eqv)
+[MIX] t= 595.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.62 TFLOPS(eqv)
+[FP16] validate | abs=7.509e-2 | rel=8.194e1 | OK
+[MIX] t= 597.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.98 TFLOPS(eqv)
+[MIX] t= 598.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.52 TFLOPS(eqv)
+[MIX] t= 600.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.49 TFLOPS(eqv)
+[MIX] t= 601.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.38 TFLOPS(eqv)
+[FP16] validate | abs=7.454e-2 | rel=3.364e3 | OK
+[MIX] t= 603.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.76 TFLOPS(eqv)
+[MIX] t= 604.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.51 TFLOPS(eqv)
+[MIX] t= 606.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.74 TFLOPS(eqv)
+[MIX] t= 607.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.45 TFLOPS(eqv)
+[FP16] validate | abs=7.393e-2 | rel=5.943e1 | OK
+[MIX] t= 609.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.36 TFLOPS(eqv)
+[MIX] t= 611.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.55 TFLOPS(eqv)
+[MIX] t= 612.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.54 TFLOPS(eqv)
+[MIX] t= 614.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.49 TFLOPS(eqv)
+[FP16] validate | abs=7.359e-2 | rel=6.593e1 | OK
+[MIX] t= 615.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.26 TFLOPS(eqv)
+[MIX] t= 617.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.60 TFLOPS(eqv)
+[MIX] t= 618.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.36 TFLOPS(eqv)
+[MIX] t= 620.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.62 TFLOPS(eqv)
+[FP16] validate | abs=7.037e-2 | rel=8.392e1 | OK
+[MIX] t= 621.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.77 TFLOPS(eqv)
+[MIX] t= 623.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.14 TFLOPS(eqv)
+[MIX] t= 625.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.82 TFLOPS(eqv)
+[MIX] t= 626.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.95 TFLOPS(eqv)
+[FP16] validate | abs=6.725e-2 | rel=9.838e2 | OK
+[MIX] t= 628.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.20 TFLOPS(eqv)
+[MIX] t= 629.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.48 TFLOPS(eqv)
+[MIX] t= 631.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.33 TFLOPS(eqv)
+[MIX] t= 632.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.93 TFLOPS(eqv)
+[FP16] validate | abs=7.678e-2 | rel=1.427e2 | OK
+[MIX] t= 634.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.69 TFLOPS(eqv)
+[MIX] t= 635.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.85 TFLOPS(eqv)
+[MIX] t= 637.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.59 TFLOPS(eqv)
+[MIX] t= 638.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.53 TFLOPS(eqv)
+[FP16] validate | abs=7.198e-2 | rel=1.312e2 | OK
+[MIX] t= 640.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.54 TFLOPS(eqv)
+[MIX] t= 641.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.87 TFLOPS(eqv)
+[MIX] t= 643.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.60 TFLOPS(eqv)
+[MIX] t= 644.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.40 TFLOPS(eqv)
+[FP16] validate | abs=6.758e-2 | rel=1.067e2 | OK
+[MIX] t= 646.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.09 TFLOPS(eqv)
+[MIX] t= 647.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.56 TFLOPS(eqv)
+[MIX] t= 649.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.95 TFLOPS(eqv)
+[MIX] t= 650.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.86 TFLOPS(eqv)
+[FP16] validate | abs=7.333e-2 | rel=6.879e1 | OK
+[MIX] t= 652.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.87 TFLOPS(eqv)
+[MIX] t= 653.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.87 TFLOPS(eqv)
+[MIX] t= 655.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.59 TFLOPS(eqv)
+[MIX] t= 657.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.97 TFLOPS(eqv)
+[FP16] validate | abs=8.446e-2 | rel=3.678e3 | OK
+[MIX] t= 658.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.38 TFLOPS(eqv)
+[MIX] t= 660.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.47 TFLOPS(eqv)
+[MIX] t= 661.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.37 TFLOPS(eqv)
+[MIX] t= 663.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.89 TFLOPS(eqv)
+[FP16] validate | abs=7.111e-2 | rel=9.969e2 | OK
+[MIX] t= 664.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.32 TFLOPS(eqv)
+[MIX] t= 666.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.41 TFLOPS(eqv)
+[MIX] t= 667.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.12 TFLOPS(eqv)
+[MIX] t= 669.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.25 TFLOPS(eqv)
+[FP16] validate | abs=7.451e-2 | rel=1.873e2 | OK
+[MIX] t= 670.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.15 TFLOPS(eqv)
+[MIX] t= 672.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.15 TFLOPS(eqv)
+[MIX] t= 674.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.78 TFLOPS(eqv)
+[MIX] t= 675.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.80 TFLOPS(eqv)
+[FP16] validate | abs=6.595e-2 | rel=3.142e2 | OK
+[MIX] t= 677.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.25 TFLOPS(eqv)
+[MIX] t= 678.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.14 TFLOPS(eqv)
+[MIX] t= 680.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.00 TFLOPS(eqv)
+[MIX] t= 681.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.74 TFLOPS(eqv)
+[FP16] validate | abs=6.781e-2 | rel=2.485e2 | OK
+[MIX] t= 683.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.62 TFLOPS(eqv)
+[MIX] t= 684.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.64 TFLOPS(eqv)
+[MIX] t= 686.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.21 TFLOPS(eqv)
+[MIX] t= 687.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.52 TFLOPS(eqv)
+[FP16] validate | abs=8.957e-2 | rel=9.731e1 | OK
+[MIX] t= 689.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.31 TFLOPS(eqv)
+[MIX] t= 690.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.74 TFLOPS(eqv)
+[MIX] t= 692.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.59 TFLOPS(eqv)
+[MIX] t= 693.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.11 TFLOPS(eqv)
+[FP16] validate | abs=7.880e-2 | rel=6.563e2 | OK
+[MIX] t= 695.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.90 TFLOPS(eqv)
+[MIX] t= 696.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.32 TFLOPS(eqv)
+[MIX] t= 698.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.91 TFLOPS(eqv)
+[MIX] t= 700.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.44 TFLOPS(eqv)
+[FP16] validate | abs=7.162e-2 | rel=1.472e3 | OK
+[MIX] t= 701.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.23 TFLOPS(eqv)
+[MIX] t= 703.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.24 TFLOPS(eqv)
+[MIX] t= 704.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.90 TFLOPS(eqv)
+[MIX] t= 706.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.63 TFLOPS(eqv)
+[FP16] validate | abs=6.970e-2 | rel=9.833e4 | OK
+[MIX] t= 707.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.10 TFLOPS(eqv)
+[MIX] t= 709.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.03 TFLOPS(eqv)
+[MIX] t= 710.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.44 TFLOPS(eqv)
+[MIX] t= 712.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.81 TFLOPS(eqv)
+[FP16] validate | abs=8.144e-2 | rel=6.156e2 | OK
+[MIX] t= 714.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.40 TFLOPS(eqv)
+[MIX] t= 715.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.89 TFLOPS(eqv)
+[MIX] t= 717.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.68 TFLOPS(eqv)
+[MIX] t= 718.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.50 TFLOPS(eqv)
+[FP16] validate | abs=6.995e-2 | rel=3.716e2 | OK
+[MIX] t= 720.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.55 TFLOPS(eqv)
+[MIX] t= 721.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.74 TFLOPS(eqv)
+[MIX] t= 723.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.47 TFLOPS(eqv)
+[MIX] t= 724.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.43 TFLOPS(eqv)
+[FP16] validate | abs=6.554e-2 | rel=3.306e2 | OK
+[MIX] t= 726.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.88 TFLOPS(eqv)
+[MIX] t= 727.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.55 TFLOPS(eqv)
+[MIX] t= 729.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.63 TFLOPS(eqv)
+[MIX] t= 731.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.60 TFLOPS(eqv)
+[FP16] validate | abs=7.799e-2 | rel=2.314e2 | OK
+[MIX] t= 732.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.12 TFLOPS(eqv)
+[MIX] t= 734.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.80 TFLOPS(eqv)
+[MIX] t= 735.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.86 TFLOPS(eqv)
+[MIX] t= 737.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.47 TFLOPS(eqv)
+[FP16] validate | abs=7.370e-2 | rel=8.129e1 | OK
+[MIX] t= 738.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.02 TFLOPS(eqv)
+[MIX] t= 740.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.01 TFLOPS(eqv)
+[MIX] t= 741.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.15 TFLOPS(eqv)
+[MIX] t= 743.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.28 TFLOPS(eqv)
+[FP16] validate | abs=7.132e-2 | rel=8.260e1 | OK
+[MIX] t= 744.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.12 TFLOPS(eqv)
+[MIX] t= 746.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.72 TFLOPS(eqv)
+[MIX] t= 748.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.81 TFLOPS(eqv)
+[MIX] t= 749.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.55 TFLOPS(eqv)
+[FP16] validate | abs=6.549e-2 | rel=4.953e1 | OK
+[MIX] t= 751.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.74 TFLOPS(eqv)
+[MIX] t= 752.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.19 TFLOPS(eqv)
+[MIX] t= 754.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.05 TFLOPS(eqv)
+[MIX] t= 756.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.05 TFLOPS(eqv)
+[FP16] validate | abs=6.763e-2 | rel=5.576e1 | OK
+[MIX] t= 757.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.28 TFLOPS(eqv)
+[MIX] t= 759.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.56 TFLOPS(eqv)
+[MIX] t= 760.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.25 TFLOPS(eqv)
+[MIX] t= 762.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.11 TFLOPS(eqv)
+[FP16] validate | abs=7.774e-2 | rel=2.292e2 | OK
+[MIX] t= 763.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.48 TFLOPS(eqv)
+[MIX] t= 765.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.67 TFLOPS(eqv)
+[MIX] t= 766.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.98 TFLOPS(eqv)
+[MIX] t= 768.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.33 TFLOPS(eqv)
+[FP16] validate | abs=7.138e-2 | rel=3.608e3 | OK
+[MIX] t= 769.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.51 TFLOPS(eqv)
+[MIX] t= 771.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.71 TFLOPS(eqv)
+[MIX] t= 772.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.06 TFLOPS(eqv)
+[MIX] t= 774.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.12 TFLOPS(eqv)
+[FP16] validate | abs=7.549e-2 | rel=6.300e5 | OK
+[MIX] t= 775.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.45 TFLOPS(eqv)
+[MIX] t= 777.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.55 TFLOPS(eqv)
+[MIX] t= 779.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.32 TFLOPS(eqv)
+[MIX] t= 780.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.55 TFLOPS(eqv)
+[FP16] validate | abs=7.001e-2 | rel=2.174e2 | OK
+[MIX] t= 782.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.15 TFLOPS(eqv)
+[MIX] t= 783.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.78 TFLOPS(eqv)
+[MIX] t= 785.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.85 TFLOPS(eqv)
+[MIX] t= 786.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.94 TFLOPS(eqv)
+[FP16] validate | abs=8.035e-2 | rel=6.927e1 | OK
+[MIX] t= 788.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.87 TFLOPS(eqv)
+[MIX] t= 790.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.86 TFLOPS(eqv)
+[MIX] t= 791.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.29 TFLOPS(eqv)
+[MIX] t= 793.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.57 TFLOPS(eqv)
+[FP16] validate | abs=6.995e-2 | rel=1.831e2 | OK
+[MIX] t= 794.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.10 TFLOPS(eqv)
+[MIX] t= 796.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.68 TFLOPS(eqv)
+[MIX] t= 797.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.93 TFLOPS(eqv)
+[MIX] t= 799.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.73 TFLOPS(eqv)
+[FP16] validate | abs=7.109e-2 | rel=1.953e2 | OK
+[MIX] t= 800.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.13 TFLOPS(eqv)
+[MIX] t= 802.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.40 TFLOPS(eqv)
+[MIX] t= 804.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.55 TFLOPS(eqv)
+[MIX] t= 805.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.40 TFLOPS(eqv)
+[FP16] validate | abs=6.607e-2 | rel=5.769e2 | OK
+[MIX] t= 807.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.14 TFLOPS(eqv)
+[MIX] t= 808.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.18 TFLOPS(eqv)
+[MIX] t= 810.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.93 TFLOPS(eqv)
+[MIX] t= 811.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.80 TFLOPS(eqv)
+[FP16] validate | abs=8.575e-2 | rel=1.468e4 | OK
+[MIX] t= 813.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.07 TFLOPS(eqv)
+[MIX] t= 814.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.82 TFLOPS(eqv)
+[MIX] t= 816.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.11 TFLOPS(eqv)
+[MIX] t= 817.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.34 TFLOPS(eqv)
+[FP16] validate | abs=7.454e-2 | rel=2.408e2 | OK
+[MIX] t= 819.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.86 TFLOPS(eqv)
+[MIX] t= 820.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.24 TFLOPS(eqv)
+[MIX] t= 822.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.72 TFLOPS(eqv)
+[MIX] t= 824.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.61 TFLOPS(eqv)
+[FP16] validate | abs=8.110e-2 | rel=2.372e2 | OK
+[MIX] t= 825.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.29 TFLOPS(eqv)
+[MIX] t= 827.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.98 TFLOPS(eqv)
+[MIX] t= 828.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.91 TFLOPS(eqv)
+[MIX] t= 830.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.03 TFLOPS(eqv)
+[FP16] validate | abs=7.602e-2 | rel=1.810e2 | OK
+[MIX] t= 831.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.53 TFLOPS(eqv)
+[MIX] t= 833.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.96 TFLOPS(eqv)
+[MIX] t= 835.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.24 TFLOPS(eqv)
+[MIX] t= 836.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.81 TFLOPS(eqv)
+[FP16] validate | abs=7.080e-2 | rel=6.420e1 | OK
+[MIX] t= 838.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.14 TFLOPS(eqv)
+[MIX] t= 839.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.69 TFLOPS(eqv)
+[MIX] t= 841.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.88 TFLOPS(eqv)
+[MIX] t= 842.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.37 TFLOPS(eqv)
+[FP16] validate | abs=7.057e-2 | rel=1.310e2 | OK
+[MIX] t= 844.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.89 TFLOPS(eqv)
+[MIX] t= 845.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.58 TFLOPS(eqv)
+[MIX] t= 847.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.45 TFLOPS(eqv)
+[MIX] t= 849.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.84 TFLOPS(eqv)
+[FP16] validate | abs=7.222e-2 | rel=2.701e2 | OK
+[MIX] t= 850.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.10 TFLOPS(eqv)
+[MIX] t= 852.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.85 TFLOPS(eqv)
+[MIX] t= 853.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.41 TFLOPS(eqv)
+[MIX] t= 855.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.43 TFLOPS(eqv)
+[FP16] validate | abs=8.316e-2 | rel=1.449e2 | OK
+[MIX] t= 856.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.11 TFLOPS(eqv)
+[MIX] t= 858.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.58 TFLOPS(eqv)
+[MIX] t= 860.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.96 TFLOPS(eqv)
+[MIX] t= 861.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.40 TFLOPS(eqv)
+[FP16] validate | abs=7.851e-2 | rel=3.281e2 | OK
+[MIX] t= 863.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.01 TFLOPS(eqv)
+[MIX] t= 864.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.59 TFLOPS(eqv)
+[MIX] t= 866.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.52 TFLOPS(eqv)
+[MIX] t= 867.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.06 TFLOPS(eqv)
+[FP16] validate | abs=7.808e-2 | rel=1.761e2 | OK
+[MIX] t= 869.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.75 TFLOPS(eqv)
+[MIX] t= 870.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.52 TFLOPS(eqv)
+[MIX] t= 872.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.40 TFLOPS(eqv)
+[MIX] t= 874.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.83 TFLOPS(eqv)
+[FP16] validate | abs=6.828e-2 | rel=1.679e2 | OK
+[MIX] t= 875.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.37 TFLOPS(eqv)
+[MIX] t= 877.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.84 TFLOPS(eqv)
+[MIX] t= 878.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.46 TFLOPS(eqv)
+[MIX] t= 880.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.57 TFLOPS(eqv)
+[FP16] validate | abs=7.712e-2 | rel=4.773e3 | OK
+[MIX] t= 881.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.72 TFLOPS(eqv)
+[MIX] t= 883.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.62 TFLOPS(eqv)
+[MIX] t= 884.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.25 TFLOPS(eqv)
+[MIX] t= 886.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.97 TFLOPS(eqv)
+[FP16] validate | abs=7.059e-2 | rel=7.014e1 | OK
+[MIX] t= 888.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.22 TFLOPS(eqv)
+[MIX] t= 889.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.15 TFLOPS(eqv)
+[MIX] t= 891.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.42 TFLOPS(eqv)
+[MIX] t= 892.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.30 TFLOPS(eqv)
+[FP16] validate | abs=7.050e-2 | rel=3.120e3 | OK
+[MIX] t= 894.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  21.97 TFLOPS(eqv)
+[MIX] t= 895.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.81 TFLOPS(eqv)
+[MIX] t= 897.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.28 TFLOPS(eqv)
+[MIX] t= 898.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.05 TFLOPS(eqv)
+[FP16] validate | abs=7.512e-2 | rel=1.693e2 | OK
+[MIX] t= 900.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.64 TFLOPS(eqv)
+[MIX] t= 901.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.34 TFLOPS(eqv)
+[MIX] t= 903.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.83 TFLOPS(eqv)
+[MIX] t= 904.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.33 TFLOPS(eqv)
+[FP16] validate | abs=6.618e-2 | rel=1.292e2 | OK
+[MIX] t= 906.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.10 TFLOPS(eqv)
+[MIX] t= 908.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.33 TFLOPS(eqv)
+[MIX] t= 909.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.47 TFLOPS(eqv)
+[MIX] t= 910.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.82 TFLOPS(eqv)
+[FP16] validate | abs=6.985e-2 | rel=7.220e2 | OK
+[MIX] t= 912.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.88 TFLOPS(eqv)
+[MIX] t= 914.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.93 TFLOPS(eqv)
+[MIX] t= 915.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.47 TFLOPS(eqv)
+[MIX] t= 917.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.29 TFLOPS(eqv)
+[FP16] validate | abs=8.635e-2 | rel=2.825e2 | OK
+[MIX] t= 918.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.62 TFLOPS(eqv)
+[MIX] t= 920.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.18 TFLOPS(eqv)
+[MIX] t= 921.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.15 TFLOPS(eqv)
+[MIX] t= 923.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.65 TFLOPS(eqv)
+[FP16] validate | abs=7.611e-2 | rel=1.730e2 | OK
+[MIX] t= 924.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.23 TFLOPS(eqv)
+[MIX] t= 926.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.37 TFLOPS(eqv)
+[MIX] t= 927.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.83 TFLOPS(eqv)
+[MIX] t= 929.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.84 TFLOPS(eqv)
+[FP16] validate | abs=7.988e-2 | rel=3.720e2 | OK
+[MIX] t= 930.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.29 TFLOPS(eqv)
+[MIX] t= 932.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.32 TFLOPS(eqv)
+[MIX] t= 934.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.80 TFLOPS(eqv)
+[MIX] t= 935.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.71 TFLOPS(eqv)
+[FP16] validate | abs=7.066e-2 | rel=1.856e2 | OK
+[MIX] t= 937.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.55 TFLOPS(eqv)
+[MIX] t= 938.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.56 TFLOPS(eqv)
+[MIX] t= 940.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.05 TFLOPS(eqv)
+[MIX] t= 941.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.86 TFLOPS(eqv)
+[FP16] validate | abs=7.584e-2 | rel=5.111e2 | OK
+[MIX] t= 943.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.08 TFLOPS(eqv)
+[MIX] t= 945.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.19 TFLOPS(eqv)
+[MIX] t= 946.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.52 TFLOPS(eqv)
+[MIX] t= 948.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.89 TFLOPS(eqv)
+[FP16] validate | abs=7.790e-2 | rel=7.813e1 | OK
+[MIX] t= 949.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.29 TFLOPS(eqv)
+[MIX] t= 951.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.20 TFLOPS(eqv)
+[MIX] t= 952.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.17 TFLOPS(eqv)
+[MIX] t= 954.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.33 TFLOPS(eqv)
+[FP16] validate | abs=6.988e-2 | rel=1.932e2 | OK
+[MIX] t= 955.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.22 TFLOPS(eqv)
+[MIX] t= 957.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.15 TFLOPS(eqv)
+[MIX] t= 958.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.62 TFLOPS(eqv)
+[MIX] t= 960.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.77 TFLOPS(eqv)
+[FP16] validate | abs=7.141e-2 | rel=8.608e2 | OK
+[MIX] t= 962.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.79 TFLOPS(eqv)
+[MIX] t= 963.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.71 TFLOPS(eqv)
+[MIX] t= 965.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.81 TFLOPS(eqv)
+[MIX] t= 966.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.90 TFLOPS(eqv)
+[FP16] validate | abs=7.652e-2 | rel=1.092e2 | OK
+[MIX] t= 968.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.19 TFLOPS(eqv)
+[MIX] t= 969.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  17.86 TFLOPS(eqv)
+[MIX] t= 971.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.10 TFLOPS(eqv)
+[MIX] t= 972.6s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.05 TFLOPS(eqv)
+[FP16] validate | abs=7.857e-2 | rel=1.994e2 | OK
+[MIX] t= 974.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.48 TFLOPS(eqv)
+[MIX] t= 975.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.16 TFLOPS(eqv)
+[MIX] t= 977.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.32 TFLOPS(eqv)
+[MIX] t= 978.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.37 TFLOPS(eqv)
+[FP16] validate | abs=7.358e-2 | rel=1.007e2 | OK
+[MIX] t= 980.4s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.48 TFLOPS(eqv)
+[MIX] t= 982.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.80 TFLOPS(eqv)
+[MIX] t= 983.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.57 TFLOPS(eqv)
+[MIX] t= 985.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.17 TFLOPS(eqv)
+[FP16] validate | abs=6.944e-2 | rel=5.311e2 | OK
+[MIX] t= 986.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.78 TFLOPS(eqv)
+[MIX] t= 988.1s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  20.12 TFLOPS(eqv)
+[MIX] t= 989.7s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.44 TFLOPS(eqv)
+[MIX] t= 991.2s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.50 TFLOPS(eqv)
+[FP16] validate | abs=8.203e-2 | rel=1.093e2 | OK
+[MIX] t= 992.8s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.70 TFLOPS(eqv)
+[MIX] t= 994.3s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.16 TFLOPS(eqv)
+[MIX] t= 995.9s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.10 TFLOPS(eqv)
+[MIX] t= 997.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  18.39 TFLOPS(eqv)
+[FP16] validate | abs=8.278e-2 | rel=2.943e2 | OK
+[MIX] t= 999.0s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.35 TFLOPS(eqv)
+[MIX] t=1000.5s/1000s | GEMM       | p=FP16        | size= 4096 | inst=  19.69 TFLOPS(eqv)
+
+========================================================================
+Phase 1 core stability summary
+Testing Device: NVIDIA GeForce RTX 4060 Laptop GPU
+Video Memory: 7.7 GB
+FP16         OK   | iters=  132800 | wall= 1000.5s | compute= 936.4s | eff=  94% |    19.49 TFLOPS | val_fail=  0 | max_abs=8.965e-2 | max_rel=6.300e5
+                  detectors: ops=482 checked=8086697984 errors=0 mismatch=0 nonfinite=0 events=0
+========================================================================
+ Result:
+- No obvious computation errors or validation failures were observed in the current test window.
+========================================================================
+VERDICT_JSON: {"classification":"none","confidence_pct":72,"coverage":0.7259,"device":"NVIDIA GeForce RTX 4060 Laptop GPU","duration_s":1000.0,"precisions":[{"compute_s":936.3852619530003,"detectors":{"bit_hist":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"elements_checked":8086697984,"fault_events":0,"first_error":null,"mismatches":0,"nonfinite":0,"ops_checked":482,"total_errors":0},"elapsed_s":1000.503146628,"elements_produced":11140071424,"first_error":null,"first_error_at_s":null,"iterations":132800,"max_abs_error":0.0896453857421875,"max_rel_error":629965.9375,"precision":"FP16","supported":true,"tflops":19.491862764920057,"total_flops":18251893021081600,"validation_failures":0,"validations":163}],"result":"pass","self_test":{"checks":[{"detail":"total_errors=0, done=1024 (expected 1024)","name":"pattern_clean","passed":true},{"detail":"total_errors=1, idx=44474..44474 (want 44474..44474), xor=0x00400000 (want 0x00400000), bit_hist[22]=1","name":"injection_capture","passed":true}],"passed":true},"stressor":"cli-stressor-cuda-rs","verify_config":{"continue_on_error":false,"enabled":true,"gemm_every":4,"gemm_full_check_max_size":1024,"gemm_samples":512,"int8_validate_size":512,"intalu_samples":1024,"memcpy_every":1,"memset_every":8,"resident_interval_s":2.0,"self_test":true}}
